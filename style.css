@@ -21,10 +21,12 @@ h3 a { font-size: 1em; text-decoration: none;}
 
 #top{ float: right; text-align: right;}
 
-fieldset {background: #FCFFEC; border:none; padding: 10px 15px 15px 150px ; margin: 0 0 20px;}
-	input.default-field { width: 200px; padding: 6px; border: 2px solid #ccc; font-size: .9em; }
-	input.default-checkbox { padding: 6px; margin-right: 10px; border: 2px solid #ccc; font-size: .9em; }
-	input.default-btn { background: #7cc92d; border: 0; padding: 6px; color: #fff; font-weight: bold; font-size: .9em; }
+fieldset {background: #FCFFEC; border:none; padding: 10px 15px 15px 100px ; margin: 0 0 20px;}
+	input { padding: 6px; font-size: .9em; border: 2px solid #ccc; }
+	input:focus{ background:#EFF5FF; }
+	input.default-field { width: 50%;  outline:none;}
+	input.default-checkbox { margin-right: 10px; }
+	input.default-btn { padding-right:10px; padding-left:10px; background: #7cc92d; color: #fff; border-color: #69ab24;  font-weight: bold; }
 
 #logo { float: left; color: #808080; margin: 0 0 5px 0; line-height: 25px; }
 #menu { height: 35px; padding: 7px 0 0 0; clear: both;  margin: 0 0 18px; background-color: #fff; }
@@ -60,9 +62,9 @@ fieldset {background: #FCFFEC; border:none; padding: 10px 15px 15px 150px ; marg
 	#rl li, #rr li { list-style: none; border-bottom: 1px solid #eee; padding: 4px; margin: 0; }
 	#rl li a, #rr li a { background: #fff url(images/arrow.gif) no-repeat center left; padding: 0 0 0 12px; color: #808080;  }
 
-#footer { clear: both; width: 940px; padding: 10px; margin: 0 0 15px; font-size: .9em; color: #7ECBDF; background: #47A4BE }
+#footer { clear: both; width: 940px; padding: 10px; margin: 0 0 15px; font-size: .9em; color: #86ddf2; background: #47A4BE }
 	#footer li { list-style: none; }
-	#fr li a { color:#7ECBDF }
+	#fr li a { color: #86ddf2}
 	#fl { width: 600px; }
-	#fl a { color:#7ECBDF }
+	#fl a { color:#86ddf2 }
 	#fr { float: right; }
