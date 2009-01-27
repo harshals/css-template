@@ -10,6 +10,10 @@ a {	color: #4896AC;; background: transparent; }
 a:hover { color: #CC9933; background: transparent; text-decoration: none;}
 
 p { margin: 0 0 15px 0; }
+
+form { margin: 0; padding: 0; }
+
+
 h1 { color:#47A4BE; margin: 15px 0 0; }
 h1 a { color:#47A4BE; background: inherit; text-decoration: none;}
 img { border: 0; }
@@ -22,11 +26,11 @@ h3 a { font-size: 1em; text-decoration: none;}
 
 #top{ float: right; text-align: right;}
 
-fieldset {background: #FCFFEC; border:none; padding: 10px 15px 15px 100px ; margin: 0 0 20px;}
+fieldset {background: #FCFFEC; border:none; padding: 20px 15px 20px 100px ; margin: 0 0 20px;}
 	input { padding: 6px; font-size: .9em; border: 2px solid #ccc; }
 	input:focus{ background:#EFF5FF; }
 	input.default-field { width: 50%;  outline:none;}
-	input.default-checkbox { margin-right: 10px; }
+	input.default-checkbox { margin-right: 10px; background: transparent; border:none }
 	input.default-btn { padding-right:10px; padding-left:10px; background: #7cc92d; color: #fff; border-color: #69ab24;  font-weight: bold; }
 
 #logo { float: left; color: #808080; margin: 0 0 5px 0; line-height: 25px; }
