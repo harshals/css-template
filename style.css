@@ -1,5 +1,5 @@
 /* 
-	project:  c2c
+	project:  Projectname
 	author:   Marcin Nowakowski (www.mymanufactory.com) 
 */
 
@@ -27,20 +27,12 @@ fieldset {background: #FCFFEC; border:none; padding: 10px 15px 15px 150px ; marg
 	input.default-btn { background: #7cc92d; border: 0; padding: 6px; color: #fff; font-weight: bold; font-size: .9em; }
 
 #logo { float: left; color: #808080; margin: 0 0 5px 0; line-height: 25px; }
-#menu { height: 35px; padding: 7px 0 0 0; clear: both;  margin: 0 0 18px; background: #fff url(images/menubg.gif) repeat-x; }
+#menu { height: 35px; padding: 7px 0 0 0; clear: both;  margin: 0 0 18px; background-color: #fff; }
 	#menu li { font-size: 1.1em; display: inline; text-transform: uppercase; }
 	#menu li a { margin: 0 25px 0 10px; color: #808080; text-decoration: none;}
 	#menu li a:hover { color: #444; }
 	#menu li .current { color: #444; text-decoration: none; background: #F0FDE2 }
-/*	
-#navcontainer { margin: 0 0 25px 0; padding: 0; height: 30px; border-bottom: 1px solid #7ECBDF; clear:both;}
-	#navcontainer ul { border: 0; margin: 0; padding: 0; list-style-type: none; text-align: center; }
-	#navcontainer ul li { display: inline; float: left; text-align: center; padding: 0; margin: 0; text-transform: uppercase; }
-	#navcontainer ul li a { background: #fff; height: 25px; padding: 5px 10px 0 10px; margin: 0 0 10px 0; color: #808080; text-decoration: none; display: block; text-align: center; }
-	#navcontainer ul li a:hover { color: #444; background: #F0FDE2 }
-	#navcontainer a:active { color: #fff; background: #7ECBDF }
-	#navcontainer li#active a { color: #fff; background: #7ECBDF }
-*/	
+	
 #navcontainer ul { padding-left: 0; margin: 0 0 25px 0; height:30px; float: left; width: 100%; border-bottom: 1px solid #7ECBDF;}
 	#navcontainer ul li { display: inline; text-transform: uppercase;}
 	#navcontainer ul li a { height: 25px; padding: 5px 10px 0 10px; text-decoration: none; float: left; }
