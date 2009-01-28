@@ -4,7 +4,7 @@
 */
 
 *{ margin: 0; padding: 0; }* 
-body { font: .80em "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif; line-height: 1.6em; background: #fff; color: #444;}
+body { font: .80em Arial, Helvetica, sans-serif; line-height: 1.6em; background: #fff; color: #444;}
 
 a {	color: #4896AC;; background: transparent; }
 a:hover { color: #CC9933; background: transparent; text-decoration: none;}
@@ -17,10 +17,10 @@ form { margin: 0; padding: 0; }
 h1 { color:#47A4BE; margin: 15px 0 0; }
 h1 a { color:#47A4BE; background: inherit; text-decoration: none;}
 img { border: 0; }
-h2 { color: #7cc92d; font: normal 1.8em "Trebuchet MS", Arial, Sans-Serif; margin: 0 0 12px; }
+h2 { color: #7cc92d; font-size: 1.8em; margin: 0 0 12px; }
 h2 a { color: #7cc92d; text-decoration: none;}
-h3 a { font-size: 1em; text-decoration: none;}
-#main h3 a { font-size: .84em; color: #808080; font-weight: normal; text-transform: uppercase; text-decoration: none; }
+h3 { color:#666 }
+h3 a { color:#47A4BE; font-size: 1em; text-decoration: none;}
 
 #content { width: 940px; margin: 0 auto; padding: 5px 0 0 0; border-top: 5px solid #8fd448;}
 
@@ -34,14 +34,9 @@ fieldset {background: #FCFFEC; border:none; padding: 20px 15px 20px 100px ; marg
 	input.default-btn { padding-right:10px; padding-left:10px; background: #7cc92d; color: #fff; border-color: #69ab24;  font-weight: bold; }
 
 #logo { float: left; color: #808080; margin: 0 0 5px 0; line-height: 25px; }
-#menu { height: 35px; padding: 7px 0 0 0; clear: both;  margin: 0 0 18px; background-color: #fff; }
-	#menu li { font-size: 1.1em; display: inline; text-transform: uppercase; }
-	#menu li a { margin: 0 25px 0 10px; color: #808080; text-decoration: none;}
-	#menu li a:hover { color: #444; }
-	#menu li .current { color: #444; text-decoration: none; background: #F0FDE2 }
 	
-#navcontainer ul { padding-left: 0; margin: 0 0 25px 0; height:30px; float: left; width: 100%; border-bottom: 1px solid #7ECBDF;}
-	#navcontainer ul li { display: inline; text-transform: uppercase;}
+#navcontainer ul { padding-left: 0; font-size: 1.2em; margin: 0 0 25px 0; height:30px; float: left; width: 100%; border-bottom: 1px solid #7ECBDF;}
+	#navcontainer ul li { display: inline; }
 	#navcontainer ul li a { height: 25px; padding: 5px 10px 0 10px; text-decoration: none; float: left; }
 	#navcontainer ul li a:hover { color: #444; background: #F0FDE2 }
 	#navcontainer a:active { color: #fff; background: #47A4BE }
@@ -73,3 +68,30 @@ fieldset {background: #FCFFEC; border:none; padding: 20px 15px 20px 100px ; marg
 	#fl { width: 600px; }
 	#fl a { color:#86ddf2 }
 	#fr { float: right; }
+	
+.positive_notice, .negative_notice {
+	padding: 5px;
+	text-align: center;
+	font-size: small;
+	margin: 20px 0px;
+}
+
+.positive_notice {
+	background-color: #D5EEAA;
+	border: solid 2px #B2DB6B;
+	color: #4F940F;
+}
+
+.positive_notice a {
+	color: #4F940F;
+}
+
+.negative_notice {
+	background-color: #FFD3D3;
+	border: solid 2px #FFAFAF;
+	color: #c00;
+}
+
+.negative_notice a {
+	color: #c00;
+}
