@@ -1,3 +1,5 @@
 *CSS template*
 
-It's a small project which defines basic xhtml/css structure to use in large web apps.
+It's a small template project which defines basic xhtml/css structure to use in large web apps. All layout is small and simple, ready to extend. Live demo: http://public.mymanufactory.com/projects/css-template/
+
+Feel free to copy and use. 
