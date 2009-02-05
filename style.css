@@ -11,6 +11,8 @@ a:hover { color: #69ab24; background: transparent; text-decoration: none;}
 
 p { margin: 0 0 15px 0; }
 
+.small { font-size: smaller }
+
 form { margin: 0; padding: 0; }
 
 h1 { color:#5c5c5c; margin: 15px 0 0; letter-spacing: -1px; }
@@ -69,12 +71,13 @@ p.border { clear: both; border-left: 4px solid #ccc; padding: 0 0 0 15px; }
 #rr { float: right; width: 290px; }
 	#rl li, #rr li { list-style: none; border-bottom: 1px solid #eee; margin: 0; padding: 4px 4px 4px 12px; background: url(images/arrow.gif) no-repeat 0 .8em }
 
-#footer { clear: both; width:940px; padding: 0; margin: 0; font-size: .9em; color: #86ddf2; background: #47A4BE }
-	#footer li { list-style: none; padding:15px }
-	#fr li a { color: #86ddf2}
-	#fl { width: 600px; padding: 15px; }
+#footer { overflow:hidden; clear:both; width:940px; padding: 0; margin: 0; font-size: smaller; line-height: 1.3em; color: #DCEBFF; background:#47A4BE }
+	#footer li { list-style: none; padding: 0 0 0 12px; background: url(images/arrow-bright.gif) no-repeat 0 .6em }
+	#fr { float:right; width: 270px; padding:15px }
+	#fr h4 { color: #DCEBFF }
+	#fr ul li a { color: #86ddf2}
+	#fl { float:left; width: 500px; margin: 0 0 20px; padding:15px }
 	#fl a { color:#86ddf2 }
-	#fr { float: right; }
 	
 .positive_notice, .negative_notice { padding: 5px; text-align: center; font-size: small; margin: 20px 0px; }
 .positive_notice { background-color: #D5EEAA; border: solid 2px #B2DB6B; color: #4F940F; }
