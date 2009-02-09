@@ -71,8 +71,9 @@ p.border { clear: both; border-left: 4px solid #ccc; padding: 0 0 0 15px; }
 #rr { float: right; width: 290px; }
 	#rl li, #rr li { list-style: none; border-bottom: 1px solid #eee; margin: 0; padding: 4px 4px 4px 12px; background: url(images/arrow.gif) no-repeat 0 .8em }
 
-#footer { overflow:hidden; clear:both; width:940px; padding: 0; margin: 0; font-size: smaller; line-height: 1.3em; color: #DCEBFF; background:#47A4BE }
+#footer { overflow:hidden; clear:both; width:940px; padding: 0; margin: 0; font-size: 0.9em; line-height: 1.3em; color: #DCEBFF; background:#47A4BE }
 	#footer li { list-style: none; padding: 0 0 0 12px; background: url(images/arrow-bright.gif) no-repeat 0 .6em }
+	#footer h4 { font-size: 1em }
 	#fr { float:right; width: 270px; padding:15px }
 	#fr h4 { color: #DCEBFF }
 	#fr ul li a { color: #86ddf2}
@@ -84,3 +85,13 @@ p.border { clear: both; border-left: 4px solid #ccc; padding: 0 0 0 15px; }
 .positive_notice a { color: #4F940F; }
 .negative_notice { background-color: #FFD3D3; border: solid 2px #FFAFAF; color: #c00; }
 .negative_notice a { color: #c00; }
+
+table { border-collapse: separate; border-spacing: 0; }
+.basetable{margin:30px 0 0 0}
+.basetable th{font-weight:bold; padding:12px 8px 5px 8px; font-size:16px;text-align:center;}
+.basetable td{text-align:center;padding:12px 8px 12px 8px;border-bottom:1px solid #f1f5f6;border-right:1px solid #b5ccd1;}
+	td.long{text-align:left;background-color:#ffffff;}
+	td.blue{background-color:#f3f7f8;border-bottom:1px solid #e9f0f2;}
+	td.yellow{background-color:#fff9bd;border-bottom:1px solid #f2f0b6;border-right:0px;}
+	td.hover, tr.hover { background-color: #fff9bd; }
+	th.hover, tfoot td.hover { background-color: #fff9bd; }

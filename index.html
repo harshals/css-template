@@ -6,9 +6,12 @@
 	<meta name="description" content="App Name app" />
 	<meta name="keywords" content="App Name" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
-	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.js"></script>
+	<script type="text/javascript" src="jquery-1.3.1.js"></script>
+	<script type="text/javascript" src="jquery.tablehover.min.js"></script>
 	<script type="text/javascript">  
         $(document).ready(function() {
+        
+        	$('.basetable').tableHover();
 
 			$("#openidform").hide();
 			$("#hideopenid").hide();
@@ -90,7 +93,33 @@
   <input class="default-btn" id="user_session_submit" name="commit" type="submit" value="Login" /> <a href="#">register</a>
   </fieldset>
 </form>
-			
+
+
+<table class="basetable" cellpadding="0" cellspacing="0">
+  <tr>
+    <th>Project name</th>
+	<th>Company</th>
+    <th>Costs</th>
+  </tr>
+  <tr>
+    <td class="blue">Layout (re-design)</td>
+	<td class="blue">Builtit</td>
+    <td class="blue">1000.0</td>
+    <td class="yellow"><a href="#">Show</a></td>
+    <td class="yellow"><a href="#">Edit</a></td>
+    <td class="yellow"><a href="#">Destroy</a></td>
+  </tr>
+
+  <tr>
+    <td class="blue">Web CMS</td>
+	<td class="blue">Dropit</td>
+    <td class="blue">200.0</td>
+    <td class="yellow"><a href="#">Show</a></td>
+    <td class="yellow"><a href="#">Edit</a></td>
+    <td class="yellow"><a href="#">Destroy</a></td>
+  </tr>
+
+</table>	
 		</div>
 		
 		<div id="ad">
