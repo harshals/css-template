@@ -68,29 +68,39 @@
 			<p>Suspendisse egestas fringilla odio. Donec lacinia tristique ante. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam blandit ultricies nisl. Nullam dapibus, mauris id scelerisque feugiat, sapien augue porta ipsum, ut blandit tellus enim vel mauris. <a href="#">Praesent</a> accumsan metus vel ipsum. Maecenas aliquam blandit mi. Pellentesque dolor magna, posuere vel, condimentum id, accumsan ac, diam. Phasellus vel leo. Aenean velit nisl, hendrerit eget, rutrum quis, lobortis nec, libero. Nulla venenatis, turpis eu vestibulum tincidunt, felis diam luctus velit, facilisis cursus mi ligula vitae nunc. Aenean velit nisl, hendrerit eget, rutrum quis, lobortis nec, libero. Nulla venenatis, turpis eu vestibulum tincidunt, felis diam luctus velit, facilisis cursus mi ligula vitae nunc. Aenean velit nisl, hendrerit eget, rutrum quis, lobortis nec, libero. Nulla venenatis, turpis eu vestibulum tincidunt, felis diam luctus velit, facilisis cursus mi ligula vitae nunc.</p>
 			
 			<h2>Login</h2>
-<div class="positive_notice">Positive notice</div>
-<div class="negative_notice">Negative notice</div>
-<form action="/user_session" class="new_user_session" id="new_user_session" method="post">
+<div class="positive_notice">Positive <a href='#'>notice</a></div>
+<div class="neutral_notice">Neutral <a href='#'>notice</a></div>
+<div class="negative_notice">Negative <a href='#'>notice</a></div>
+<form action="some_action" method="post">
   <fieldset>
+  <ol id='regularform'>
+
+  	<li><label for="user_session_login">Login</label> <a href="javascript:;" title="OpenID" id="showopenid" class='small' style="display:none;">login using OpenID</a>
+  	<input class="default-field" id="user_session_login" name="user_session[login]" size="30" type="text" />
+  	</li>
+  	
+  	<li>
+  	<label for="user_session_password">Password</label> <a href="#" class='small'>forgot?</a>
+  	<input class="default-field" id="user_session_password" name="user_session[password]" size="30" type="password" />
+  	</li>
+ 
+  </ol>
   
-  <span id='regularform'>
-  <label for="user_session_login">Login</label> <a href="javascript:;" title="OpenID" id="showopenid" class='small' style="display:none;">login using OpenID</a><br />
-  <input class="default-field" id="user_session_login" name="user_session[login]" size="30" type="text" /><br />
-  <br />
-  <label for="user_session_password">Password</label> <a href="#">forgot?</a><br />
-  <input class="default-field" id="user_session_password" name="user_session[password]" size="30" type="password" /><br />
-  <br />
-  </span>
+  <ol id='openidform'>
+  <li>
+  <label for="user_session_openid_identifier">Openid identifier</label> <a href="javascript:;" id="hideopenid" class='small' style="display:none;">login using standard user name / password</a>
+  <input class="default-field" id="user_session_openid_identifier" name="user_session[openid_identifier]" size="30" type="text" />
+  </li>
+  </ol>
   
-  <span id='openidform'>
-  <label for="user_session_openid_identifier">Openid identifier</label> <a href="javascript:;" id="hideopenid" class='small' style="display:none;">login using standard user name / password</a><br />
-  <input class="default-field" id="user_session_openid_identifier" name="user_session[openid_identifier]" size="30" type="text" /><br />
-  <br />
-  </span>
+  <ol class='last'>
+    <li>
+      <input class="default-checkbox" id="user_session_remember_me" name="user_session[remember_me]" type="checkbox" value="1" /><input name="user_session[remember_me]" type="hidden" value="0" /><label for="user_session_remember_me">Remember me</label>
+    </li>
+  </ol>
   
-  <input class="default-checkbox" id="user_session_remember_me" name="user_session[remember_me]" type="checkbox" value="1" /><input name="user_session[remember_me]" type="hidden" value="0" /><label for="user_session_remember_me">Remember me</label><br />
-  <br />
-  <input class="default-btn" id="user_session_submit" name="commit" type="submit" value="Login" /> <a href="#">register</a>
+  <input class="default-btn" name="commit" type="submit" value="Login" /> <a href="#">register</a>
+  
   </fieldset>
 </form>
 
@@ -122,7 +132,8 @@
 </table>	
 		</div>
 		
-		<div id="ad">
+		<div id="main-right">
+		<div id="adv">
 			<p>Advertising</p>
 		</div>
 		
@@ -144,6 +155,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut pretium mauris nec arcu. Integer at leo vel ipsum elementum sodales. Nam est quam, posuere non, feugiat nec, consectetuer ac, lectus. Aenean faucibus. Suspendisse euismod, leo ut pretium ornare, libero arcu malesuada ipsum, at convallis pede augue at arcu. Aliquam lacus massa, pellentesque sit amet, feugiat et, cursus volutpat, massa.</p>
 			</div>
 			
+		</div>
 		</div>
 
 		<div id="line"></div>
