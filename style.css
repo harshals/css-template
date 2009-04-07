@@ -33,6 +33,7 @@ h3 a { color:#47A4BE; font-size: 1em; text-decoration: none;}
 
 fieldset {background: #ffc; border: 2px solid #edf495; padding: 20px 15px 20px 100px ; margin: 0 0 20px;}
 	fieldset ol li {list-style: none; margin-bottom: 15px;}
+	fieldset ol.buttons li {display:inline; vertical-align:middle}
 	fieldset ol.last { padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid #edf495; }
 	input, textarea, select { padding: 6px; font-size: .9em; border: 2px solid #ccc }
 	input:focus, textarea:focus{ background:#EFF5FF }
@@ -97,7 +98,7 @@ fieldset {background: #ffc; border: 2px solid #edf495; padding: 20px 15px 20px 1
 .neutral_notice { background-color: #dcebff; border: solid 2px #a7d1ff; color: #2a8cb7; }
   .neutral_notice a { color: #2a8cb7; }
 
-table { border-collapse: separate; border-spacing: 0; }
+table { border-collapse: collapse; border:0; border-style:none; border-spacing: 0; width: 100%; }
 .basetable{margin:30px 0 0 0}
 .basetable th{font-weight:bold; padding:12px 8px 5px 8px; font-size:16px;text-align:center;}
 .basetable td{text-align:center;padding:12px 8px 12px 8px;border-bottom:1px solid #f1f5f6;border-right:1px solid #b5ccd1;}
