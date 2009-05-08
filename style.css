@@ -113,6 +113,6 @@ table { border-collapse: collapse; border:0; border-style:none; border-spacing: 
 	td.blue{background-color:#f3f7f8;border-bottom:1px solid #e9f0f2;}
 	td.yellow{background-color:#fff9bd;border-bottom:1px solid #f2f0b6;border-right:0px;}
 	td.hover, tr.hover { background-color: #fff9bd; }
-	th.hover, tfoot td.hover { background-color: ivory; }
+	th.hover, tfoot td.hover { background: #def3b8; }
 
 pre { background-color: #eee; padding: 10px; font-size: 11px }
