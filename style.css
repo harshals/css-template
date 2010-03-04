@@ -74,6 +74,15 @@ fieldset {background: #ffc; border: 2px solid #edf495; padding: 20px 15px 20px 1
 	#main-right #shortnews { width: 270px; }
 	  #main-right #shortnews ul li { font-size: smaller; list-style: none; border-bottom: 1px solid #eee; margin: 0; padding: 2px 0 2px 7px; background: url(images/arrow.gif) no-repeat 0 .9em }
 	#main-right .news { border-bottom: 1px solid #eee; padding: 0 0 2px; margin: 0 0 10px;}
+
+  #main .positive_notice, #main .negative_notice, #main .neutral_notice { padding: 5px; text-align: center; font-size: small; margin: 5px 0; }
+  #main .positive_notice p, #main .negative_notice p, #main .neutral_notice p { text-align: center; margin: 0; padding:0 }
+  #main .positive_notice { background: #D5EEAA; color: #4F940F; border: solid 2px #B2DB6B; }
+    #main .positive_notice p a { color: #4F940F; }
+  #main .negative_notice { background-color: #FFD3D3; color: #c00; border: solid 2px #FFAFAF; }
+    #main .negative_notice p a { color: #c00; }
+  #main .neutral_notice { background-color: #dcebff; color: #2a8cb7; border: solid 2px #a7d1ff; }
+    #main .neutral_notice p a { color: #2a8cb7; }
 	
 #right { margin: 0 15px 20px 0; padding: 0 0 0 15px; float: right; width: 620px; text-align: justify; }
 
@@ -95,14 +104,6 @@ fieldset {background: #ffc; border: 2px solid #edf495; padding: 20px 15px 20px 1
 		#fr ul li a { color: #86ddf2}
 	#fl { float:left; width: 500px; margin: 0 0 20px; padding:15px }
 		#fl a { color:#86ddf2 }
-	
-.positive_notice, .negative_notice, .neutral_notice { padding: 5px; text-align: center; font-size: small; margin: 20px 0px; }
-.positive_notice { background-color: #D5EEAA; border: solid 2px #B2DB6B; color: #4F940F; }
-  .positive_notice a { color: #4F940F; }
-.negative_notice { background-color: #FFD3D3; border: solid 2px #FFAFAF; color: #c00; }
-  .negative_notice a { color: #c00; }
-.neutral_notice { background-color: #dcebff; border: solid 2px #a7d1ff; color: #2a8cb7; }
-  .neutral_notice a { color: #2a8cb7; }
 
 table { border-collapse: collapse; border:0; border-style:none; border-spacing: 0; width: 100%; }
 .basetable{margin:30px 0 0 0}
