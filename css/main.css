@@ -40,10 +40,11 @@ h3 { color:#666 ;
 #content {  border-top: 5px solid #8fd448; background: #fff}
 
 #top{ float: right; text-align: right;}
-form { margin: 0; padding: 0; }
+form { margin: 0; padding: 0; display:block;}
 
 fieldset { 
-	background: #ffc; border: 2px solid #edf495; padding: 20px 15px 20px 100px ; margin: 0 0 20px;
+
+	background: #ffc; border: 2px solid #edf495; padding: 20px 15px 20px 25px ; margin: 0 0 20px;
 	
 	ol li {list-style: none; margin-bottom: 15px;}
 	
@@ -51,11 +52,11 @@ fieldset {
 	
 	ol.last { padding-bottom: 10px; margin-bottom: 10px; border-bottom: 2px solid #edf495; }
 
-	input, textarea, select { padding: 6px; font-size: .9em; border: 2px solid #ccc }
+	input, textarea, select { padding: 6px; font-size: .9em; border: 2px solid #ccc ; display : block;}
 	
-	input.default-field { width: 250px; outline:none; display: block}
+	input.default-field {  outline:none; }
 	
-	textarea.default-field  { height:90px; width: 250px; outline:none; display: block }
+	textarea.default-field  { height:90px;  outline:none; }
 	
 	input.small-field { width: 100px; padding: 4px; outline:none;}
 	
@@ -67,7 +68,11 @@ fieldset {
 
 	:focus { background:#EFF5FF }
 
+}
 
+fieldset.vertical {
+
+	input, textarea, select {  display : block;}
 }
 
 
