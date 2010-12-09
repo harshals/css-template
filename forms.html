@@ -16,7 +16,7 @@
  
   <link rel="stylesheet" href="css/960_24_col.css" type="text/css" />
   
-	  <link rel="stylesheet/less" href="css/main.css" type="text/css"> 
+    <link rel="stylesheet/less" href="css/main.css" type="text/css"> 
 	<script src="javascript/less.js" type="text/javascript"></script>
 
   <script type="text/javascript" src="javascript/jquery.js">
@@ -25,7 +25,7 @@
   
 </script>
  
-  <script type="text/javascript" src="javascript/firebug-lite-debug.js"></script>
+  <!-- <script type="text/javascript" src="javascript/firebug-lite-debug.js"></script> -->
 
     <script type="text/javascript">
 //<![CDATA[
@@ -144,9 +144,8 @@
                   Suzuki
                 </option>
               </select></li>
-            </ol>
+            
 
-            <ol id='openidform'>
               <li><label for="user_session_openid_identifier">Openid
               identifier</label> <a href="javascript:;" id="hideopenid"
               class='small' style="display:none;" name=
@@ -155,20 +154,19 @@
               "user_session_openid_identifier" name=
               "user_session[openid_identifier]" size="30" type=
               "text" /></li>
-            </ol>
 
-            <ol class='last'>
-              <li><input class="default-checkbox" id=
+              <li class="last"><input class="default-checkbox" id=
               "user_session_remember_me" name=
               "user_session[remember_me]" type="checkbox" value=
               "1" /><input name="user_session[remember_me]" type=
               "hidden" value="0" /><label for=
               "user_session_remember_me">Remember me</label></li>
-            </ol>
-
+			</ol>
             <ol class="buttons">
               <li><input class="default-btn" name="commit" type=
               "submit" value="Login" /></li>
+			  <li><input class="default-btn" name="cancel" type=
+              "button" value="Cancel" /></li>	
 
               <li><a href="#">register</a></li>
             </ol>
