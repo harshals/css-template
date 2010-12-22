@@ -42,6 +42,15 @@ h3 { color:#666 ;
 #top{ float: right; text-align: right;}
 form { margin: 0; padding: 0; display:block;}
 
+form#search_engine {
+
+	padding: 20px 15px 20px 25px ; margin: 0 0 2px;
+	input { padding: 5px; font-size: .9em; border: 2px solid #ccc ; }
+	input.small-field { width: 50%; padding: 4px; outline:none;}
+	
+	input.small-btn { padding: 4px; background: #7cc92d; color: #fff; border-color: #69ab24; font-weight: bold; }
+}
+
 fieldset { 
 
 	background: #ffc; border: 2px solid #edf495; padding: 20px 15px 20px 25px ; margin: 0 0 20px;
@@ -91,8 +100,52 @@ fieldset.vertical {
 			a:active { color: #fff; background: #47A4BE }
 		}
 	}
-	li#active a { color: #fff; background: #47A4BE }
+	li.active a { color: #fff; background: #47A4BE }
 }
+.section-menu {
+	
+ 	background: none repeat scroll 0 0 #DDE3EB;
+	padding: 10px 15px; margin: 0 0 20px;
+    color: #333333;
+    ul { 
+    	list-style: none outside none; 
+    	li {
+  			padding-bottom: 0.75em;
+			position: relative;
+
+			a {
+				color: #000000;
+    			margin-left: 20px;
+    			margin-top: 10px;
+    			padding-left: 30px;
+			 	text-decoration: none;
+
+							
+			}
+			span {
+ 	 			background: none repeat scroll 0 0 #98A7CC;
+    			color: #FFFFFF;
+    			padding: 0.1em 0.4em;
+    			position: absolute;
+    			right: 5%;
+    			text-shadow: none;
+								
+			}
+    	}
+
+    }
+	p{
+		color: #5C6F83;
+		margin: 10px;
+    	text-shadow: 0 1px 1px #FFFFFF;
+    	text-transform: uppercase;
+		
+	}
+	
+
+	
+}
+
 
 .section-list {
 	background: #eee; 
@@ -166,8 +219,10 @@ fieldset.vertical {
 
 }
 	
-table { border-collapse: collapse; border:0; border-style:none; border-spacing: 0; width: 100%; }
-.basetable { 
+
+
+
+table.basetable { 
 
 	margin:30px 0 0 0 ;
 	th {font-weight:bold; padding:12px 8px 5px 8px; font-size:16px;text-align:center;}
@@ -179,5 +234,64 @@ table { border-collapse: collapse; border:0; border-style:none; border-spacing: 
 	td.hover, tr.hover { background-color: #fff9bd; }
 	th.hover, tfoot td.hover { background: #def3b8; }
 
+	.innertable  {
+		
+		font-size:85%;
+		td,tr {
+			margin:0px 0 0 0;
+			padding:0px 0 0 2px;
+		}
+	}
 }
+
+
+table { 
+	border-collapse: collapse; border:0; border-style:none; border-spacing: 0; width: 100%; 
+	
+	td.action {
+		span {
+			float:right;
+			margin-right:5px;
+			width:16px;height:16px;
+			cursor:pointer;
+		}
+		span.edit { background: url("icons/application_edit.png") no-repeat scroll left top transparent; }
+		span.delete { background: url("icons/delete.png") no-repeat scroll left top transparent; }
+		span.expand { background: url("icons/application_side_expand.png") no-repeat scroll left top transparent; }
+
+		input[type=checkbox] {
+			float:right;
+			margin-right:5px;
+			width:16px;height:16px;
+			background: transparent; border:none 
+		}
+	}
+	
+	td.expand {
+		
+		text-align:justify;
+		border:none;
+	}
+
+}
+
 pre { background-color: #eee; padding: 10px; font-size: 11px }
+
+/* icon sets */
+
+#create {
+	 background: url("icons/add.png") no-repeat scroll left top transparent;
+}
+#update {
+	 background: url("icons/application_edit.png") no-repeat scroll left top transparent;
+}
+#delete{
+	 background: url("icons/delete.png") no-repeat scroll left top transparent;
+}
+#search{
+	 background: url("icons/find.png") no-repeat scroll left top transparent;
+}
+#report {
+
+	 background: url("icons/report.png") no-repeat scroll left top transparent;
+}

@@ -68,23 +68,17 @@
       <div id="logo">
         <h1><a href="#">App Name</a></h1>
 
-        <p>sub name or slogan</p>
+        <span class="right">sub name or slogan</span>
       </div>
     </div>
 
     <div class="grid_6">
       <div id="top">
-        <p><a href="#">John Smith</a> ? <a href="#">Logout</a></p>
-
+       
         <form id="search_engine" method="post" action="."
         accept-charset="UTF-8">
-          <p><input class="small-field" name="search_query" type="text"
-          id="keywords" value="Search Keywords" onfocus=
-          "document.forms[&#39;search_engine&#39;].keywords.value=&#39;&#39;;"
-          onblur=
-          "if (document.forms[&#39;search_engine&#39;].keywords.value == &#39;&#39;) document.forms[&#39;search_engine&#39;].keywords.value=&#39;Search Keywords&#39;;" />
-          <input class="small-btn" name="submit" type="submit" value=
-          "Search" /></p>
+          <input class="small-field" name="search_query" type="text"          id="keywords" value="Search Keywords"  />
+          <input class="small-btn" name="submit" type="submit" value="Search" />
         </form>
       </div>
     </div>
@@ -92,20 +86,25 @@
     <div class="clear"></div><!-- sidebar form container -->
     <!-- menu -->
 	<div class="grid_24" id="">
-      <div id="navcontainer">
+      <div id="navcontainer" class="">
         <ul id="navlist">
-          <li id="active"><a href="#" id="current" name=
+          <li ><a href="index.html"  name=
           "current">Home</a></li>
 
-          <li><a href="forms.html">Forms</a></li>
+          <li class="active"><a href="forms.html">Forms</a></li>
 
-          <li><a href="tables.html">Tables</a></li>
+          <li ><a href="tables.html">Tables</a></li>
 
           <li><a href="menu.html">Menu</a></li>
 
-          <li><a href="#">Contact</a></li>
+          <li><a href="overview.html">Overview</a></li>
+		  <li class="right"> <a href="#" id="logout">Logout</a></li>
+	
+			<li class="right"> <a href="#" id="profile">John Simth</a></li>
         </ul>
-      </div>
+	</div>
+	   
+
     </div>
 	<!-- menu -->
     <div class="clear"></div>
@@ -118,20 +117,132 @@
           <p>Negative <a href='#'>notice</a></p>
         </div>
 
-        <form action="some_action" method="post" class="">
-          <fieldset class="vertical grid_6">
+       
+		<form action="some_action" method="post" class="">
+          <fieldset class="horizontal grid_8">
+            <ol>
+              <li><label for="user_session_login">Login</label>
+              <a href="javascript:;" title="OpenID" id="showopenid"
+              class='small' style="display:none;" name=
+              "showopenid">login using OpenID</a> <input class=
+              "small-field" id="user_session_login" name=
+              "user_session[login]"  type="text" /></li>
+
+              <li><label for="user_session_password">Password</label>
+              <a href="#" class='small'>forgot?</a> <input class=
+              "default-field" id="user_session_password" name=
+              "user_session[password]"  type=
+              "password" /></li>
+
+              <li><label for="mywishlist">Wish list</label>
+              <select name="mywishlist">
+                <option value="1">
+                  Honda
+                </option>
+
+                <option value="1">
+                  Suzuki
+                </option>
+              </select></li>
+            </ol>
+
+            <ol id='openidform'>
+              <li><label for="user_session_openid_identifier">Openid
+              identifier</label> <a href="javascript:;" id="hideopenid"
+              class='small' style="display:none;" name=
+              "hideopenid">login using standard user name /
+              password</a> <input class="default-field" id=
+              "user_session_openid_identifier" name=
+              "user_session[openid_identifier]" type=
+              "text" /></li>
+            </ol>
+
+            <ol class='last'>
+              <li><input class="default-checkbox" id=
+              "user_session_remember_me" name=
+              "user_session[remember_me]" type="checkbox" value=
+              "1" /><input name="user_session[remember_me]" type=
+              "hidden" value="0" /><label for=
+              "user_session_remember_me">Remember me</label></li>
+            </ol>
+
+            <ol class="buttons">
+              <li><input class="default-btn" name="commit" type=
+              "submit" value="Login" /></li>
+
+              <li><a href="#">register</a></li>
+            </ol>
+          </fieldset>
+		  <fieldset class="vertical grid_6 ">
             <ol >
               <li ><label for="user_session_login">Login</label>
               <a href="javascript:;" title="OpenID" id="showopenid"
               class='small' style="display:none;" name=
               "showopenid">login using OpenID</a> <input class=
               "default-field" id="user_session_login" name=
-              "user_session[login]" size="30" type="text" /></li>
+              "user_session[login]" type="text" /></li>
 
               <li><label for="user_session_password">Password</label>
               <a href="#" class='small'>forgot?</a> <input class=
               "default-field" id="user_session_password" name=
-              "user_session[password]" size="30" type=
+              "user_session[password]"  type=
+              "password" /></li>
+
+              <li><label for="mywishlist">Wish list</label>
+              <select name="mywishlist">
+                <option value="1">
+                  Honda
+                </option>
+
+                <option value="1">
+                  Suzuki
+                </option>
+              </select></li>
+            
+
+              <li><label for="user_session_openid_identifier">Openid
+              identifier</label> <a href="javascript:;" id="hideopenid"
+              class='small' style="display:none;" name=
+              "hideopenid">login using standard user name /
+              password</a> <input class="default-field" id=
+              "user_session_openid_identifier" name=
+              "user_session[openid_identifier]"type=
+              "text" /></li>
+
+              <li class="last"><input class="default-checkbox" id=
+              "user_session_remember_me" name=
+              "user_session[remember_me]" type="checkbox" value=
+              "1" /><input name="user_session[remember_me]" type=
+              "hidden" value="0" /><label for=
+              "user_session_remember_me">Remember me</label></li>
+			</ol>
+            <ol class="buttons">
+              <li><input class="default-btn" name="commit" type=
+              "submit" value="Login" /></li>
+			  <li><input class="default-btn" name="cancel" type=
+              "button" value="Cancel" /></li>	
+
+              <li><a href="#">register</a></li>
+            </ol>
+          </fieldset>
+        </form>
+      
+            
+    </div><!-- main content -->
+	<!-- grid_6 right sidebar -->
+	<div class="grid_6 main right" >
+		<form action="some_action" method="post" class="">
+          <fieldset class="vertical ">
+            <ol >
+              <li ><label for="user_session_login">Login</label>
+              <input class=
+              "default-field" id="user_session_login" name=
+              "user_session[login]"  type="text" /></li>
+
+              <li><label for="user_session_password">Password</label>
+              <a href="#" class='small'>forgot?</a> <input class=
+              "default-field" id="user_session_password" name=
+              "user_session[password]"  type=
               "password" /></li>
 
               <li><label for="mywishlist">Wish list</label>
@@ -172,112 +283,7 @@
             </ol>
           </fieldset>
         </form>
-		<form action="some_action" method="post" class="grid_9">
-          <fieldset class="horizontal">
-            <ol>
-              <li><label for="user_session_login">Login</label>
-              <a href="javascript:;" title="OpenID" id="showopenid"
-              class='small' style="display:none;" name=
-              "showopenid">login using OpenID</a> <input class=
-              "small-field" id="user_session_login" name=
-              "user_session[login]" size="30" type="text" /></li>
-
-              <li><label for="user_session_password">Password</label>
-              <a href="#" class='small'>forgot?</a> <input class=
-              "default-field" id="user_session_password" name=
-              "user_session[password]" size="30" type=
-              "password" /></li>
-
-              <li><label for="mywishlist">Wish list</label>
-              <select name="mywishlist">
-                <option value="1">
-                  Honda
-                </option>
-
-                <option value="1">
-                  Suzuki
-                </option>
-              </select></li>
-            </ol>
-
-            <ol id='openidform'>
-              <li><label for="user_session_openid_identifier">Openid
-              identifier</label> <a href="javascript:;" id="hideopenid"
-              class='small' style="display:none;" name=
-              "hideopenid">login using standard user name /
-              password</a> <input class="default-field" id=
-              "user_session_openid_identifier" name=
-              "user_session[openid_identifier]" size="30" type=
-              "text" /></li>
-            </ol>
-
-            <ol class='last'>
-              <li><input class="default-checkbox" id=
-              "user_session_remember_me" name=
-              "user_session[remember_me]" type="checkbox" value=
-              "1" /><input name="user_session[remember_me]" type=
-              "hidden" value="0" /><label for=
-              "user_session_remember_me">Remember me</label></li>
-            </ol>
-
-            <ol class="buttons">
-              <li><input class="default-btn" name="commit" type=
-              "submit" value="Login" /></li>
-
-              <li><a href="#">register</a></li>
-            </ol>
-          </fieldset>
-        </form>
-      
-            
-    </div><!-- main content -->
-	<!-- grid_6 right sidebar -->
-	<div class="grid_6 main right" >
-      <div id="adv">
-        <p>Advertising</p>
-      </div>
-
-      <div id="shortnews">
-        <div class="news">
-          <h3><a href="#">Tip 1</a></h3>
-
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          Ut pretium mauris nec arcu.</p>
-        </div>
-
-        <h3><a href="#" >Tip 2</a></h3>
-
-        <p>Aliquam lacus massa, pellentesque sit amet, feugiat et,
-        cursus volutpat, massa. Integer nibh. Maecenas mattis ipsum a
-        felis.</p>
-
-        <div class="important green">
-          <h3><a href="#">This is also important</a></h3>
-
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          Ut pretium mauris nec arcu. Integer at leo vel ipsum
-          elementum sodales. Nam est quam, posuere non, feugiat nec,
-          consectetuer ac, lectus. Aenean faucibus. Suspendisse
-          euismod, leo ut pretium ornare, libero arcu malesuada ipsum,
-          at convallis pede augue at arcu. Aliquam lacus massa,
-          pellentesque sit amet, feugiat et, cursus volutpat,
-          massa.</p>
-        </div>
-
-        <div class="important blue">
-          <h3><a href="#">Important</a></h3>
-
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          Ut pretium mauris nec arcu. Integer at leo vel ipsum
-          elementum sodales. Nam est quam, posuere non, feugiat nec,
-          consectetuer ac, lectus. Aenean faucibus. Suspendisse
-          euismod, leo ut pretium ornare, libero arcu malesuada ipsum,
-          at convallis pede augue at arcu. Aliquam lacus massa,
-          pellentesque sit amet, feugiat et, cursus volutpat,
-          massa.</p>
-        </div>
-      </div>
-    </div><!-- grid_6 right sidebar -->
+	</div><!-- grid_6 right sidebar -->
 	
 	
 	<div class="clear"></div>
@@ -286,23 +292,21 @@
 	<div class="grid_24" id="footer">
 		<div class="grid_17 left">
 		
-          <p>? Copyright <a hrf=
-          "http://www.mymanufactory.com/">mymanufactory.com</a> ?
-          Created by <a href=
-          "http://www.mymanufactory.com/">newman</a></p>
-        
+          <p>&copy; Copyright <a hrf="http://www.mksoftware.in/">MK Software</a> </p>
+		  <p>          Created by <a href=
+          "http://www.mksoftware.in/harshalshah">Harshal Shah</a></p>
+			
 		</div>
 		<div class="grid_6 right">
 		
-          <h4>MyManufactory RSS</h4>
+          <h4>RSS Feed</h4>
 
           <ul>
             <li><a href=
-            "http://www.mymanufactory.com/2009/1/16/zmiany">Zmiany...</a></li>
+            "http://www.mksoftware.in/rss">Feed me</a></li>
 
-            <li><a href=
-            "http://www.mymanufactory.com/2009/1/1/merb-is-rails-rails-is-merb">
-            Merb is Rails, Rails is Merb</a></li>
+            <li><a href="http://www.github.com/harshals">
+           My Projects</a></li>
           </ul>
         		</div>
        

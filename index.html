@@ -16,14 +16,18 @@
  
   <link rel="stylesheet" href="css/960_24_col.css" type="text/css" />
   
-	  <link rel="stylesheet/less" href="css/main.css" type="text/css"> 
+    <link rel="stylesheet/less" href="css/main.css" type="text/css"> 
 	<script src="javascript/less.js" type="text/javascript"></script>
 
   <script type="text/javascript" src="javascript/jquery.js">
 </script>
   <script type="text/javascript" src="javscript/jquery.tablehover.min.js">
+  
 </script>
-  <script type="text/javascript">
+ 
+  <!-- <script type="text/javascript" src="javascript/firebug-lite-debug.js"></script> -->
+
+    <script type="text/javascript">
 //<![CDATA[
 
       /*
@@ -64,23 +68,17 @@
       <div id="logo">
         <h1><a href="#">App Name</a></h1>
 
-        <p>sub name or slogan</p>
+        <span class="right">sub name or slogan</span>
       </div>
     </div>
 
     <div class="grid_6">
       <div id="top">
-        <p><a href="#">John Smith</a> ? <a href="#">Logout</a></p>
-
+       
         <form id="search_engine" method="post" action="."
         accept-charset="UTF-8">
-          <p><input class="small-field" name="search_query" type="text"
-          id="keywords" value="Search Keywords" onfocus=
-          "document.forms[&#39;search_engine&#39;].keywords.value=&#39;&#39;;"
-          onblur=
-          "if (document.forms[&#39;search_engine&#39;].keywords.value == &#39;&#39;) document.forms[&#39;search_engine&#39;].keywords.value=&#39;Search Keywords&#39;;" />
-          <input class="small-btn" name="submit" type="submit" value=
-          "Search" /></p>
+          <input class="small-field" name="search_query" type="text"          id="keywords" value="Search Keywords"  />
+          <input class="small-btn" name="submit" type="submit" value="Search" />
         </form>
       </div>
     </div>
@@ -88,377 +86,56 @@
     <div class="clear"></div><!-- sidebar form container -->
     <!-- menu -->
 	<div class="grid_24" id="">
-      <div id="navcontainer">
+      <div id="navcontainer" class="">
         <ul id="navlist">
-          <li id="active"><a href="#" id="current" name=
+          <li class="active" ><a href="index.html"  name=
           "current">Home</a></li>
 
-          <li><a href="forms.html">Forms</a></li>
+          <li class=""><a href="forms.html">Forms</a></li>
 
-          <li><a href="tables.html">Tables</a></li>
+          <li ><a href="tables.html">Tables</a></li>
 
           <li><a href="menu.html">Menu</a></li>
 
-          <li><a href="#">Contact</a></li>
+          <li><a href="overview.html">Overview</a></li>
+		  <li class="right"> <a href="#" id="logout">Logout</a></li>
+	
+			<li class="right"> <a href="#" id="profile">John Simth</a></li>
         </ul>
-      </div>
+	</div>
+	   
+
     </div>
 	<!-- menu -->
     <div class="clear"></div>
 	<!-- main content -->
-    <div class="grid_17 main" >
-        <h2><a href="#">Aliquam metus turpis, luctus ac, sagittis eget
-        h2</a></h2>
-
-        <p><img src="images/temp.jpg" alt="Car" />Suspendisse egestas
-        fringilla odio. Donec lacinia tristique ante. Cum sociis
-        natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Etiam blandit ultricies nisl. Nullam dapibus,
-        mauris id scelerisque feugiat, sapien augue porta ipsum, ut
-        blandit tellus enim vel mauris. <a href="#">Praesent</a>
-        accumsan metus vel ipsum. Maecenas aliquam blandit mi.
-        Pellentesque dolor magna, posuere vel, condimentum id, accumsan
-        ac, diam. Phasellus vel leo. Aenean velit nisl, hendrerit eget,
-        rutrum quis, lobortis nec, libero. Nulla venenatis, turpis eu
-        vestibulum tincidunt, felis diam luctus velit, facilisis cursus
-        mi ligula vitae nunc. Aenean velit nisl, hendrerit eget, rutrum
-        quis, lobortis nec, libero. Nulla venenatis, turpis eu
-        vestibulum tincidunt, felis diam luctus velit, facilisis cursus
-        mi ligula vitae nunc. Aenean velit nisl, hendrerit eget, rutrum
-        quis, lobortis nec, libero. Nulla venenatis, turpis eu
-        vestibulum tincidunt, felis diam luctus velit, facilisis cursus
-        mi ligula vitae nunc.</p>
-
-        <h3>Etiam blandit ultricies nisl h3</h3>
-
-        <p>Suspendisse egestas fringilla odio. Donec lacinia tristique
-        ante. Cum sociis natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus. Etiam blandit ultricies nisl.
-        Nullam dapibus, mauris id scelerisque feugiat, sapien augue
-        porta ipsum, ut blandit tellus enim vel mauris. <a href=
-        "#">Praesent</a> accumsan metus vel ipsum. Maecenas aliquam
-        blandit mi. Pellentesque dolor magna, posuere vel, condimentum
-        id, accumsan ac, diam. Phasellus vel leo. Aenean velit nisl,
-        hendrerit eget, rutrum quis, lobortis nec, libero. Nulla
-        venenatis, turpis eu vestibulum tincidunt, felis diam luctus
-        velit, facilisis cursus mi ligula vitae nunc. Aenean velit
-        nisl, hendrerit eget, rutrum quis, lobortis nec, libero. Nulla
-        venenatis, turpis eu vestibulum tincidunt, felis diam luctus
-        velit, facilisis cursus mi ligula vitae nunc. Aenean velit
-        nisl, hendrerit eget, rutrum quis, lobortis nec, libero. Nulla
-        venenatis, turpis eu vestibulum tincidunt, felis diam luctus
-        velit, facilisis cursus mi ligula vitae nunc.</p>
-
-        <h2>Login</h2>
-
-        <div class="notice positive ">
-          <p>Positive <a href='#'>notice</a></p>
-        </div>
-
-        <div class="notice neutral">
-          <p>Neutral <a href='#'>notice</a></p>
-        </div>
-
-        <div class="notice negative">
-          <p>Negative <a href='#'>notice</a></p>
-        </div>
-
-        <form action="some_action" method="post" class="important">
-          <fieldset>
-            <ol>
-              <li><label for="user_session_login">Login</label>
-              <a href="javascript:;" title="OpenID" id="showopenid"
-              class='small' style="display:none;" name=
-              "showopenid">login using OpenID</a> <input class=
-              "default-field" id="user_session_login" name=
-              "user_session[login]" size="30" type="text" /></li>
-
-              <li><label for="user_session_password">Password</label>
-              <a href="#" class='small'>forgot?</a> <input class=
-              "default-field" id="user_session_password" name=
-              "user_session[password]" size="30" type=
-              "password" /></li>
-
-              <li><label for="mywishlist">Wish list</label>
-              <select name="mywishlist">
-                <option value="1">
-                  Honda
-                </option>
-
-                <option value="1">
-                  Suzuki
-                </option>
-              </select></li>
-            </ol>
-
-            <ol id='openidform'>
-              <li><label for="user_session_openid_identifier">Openid
-              identifier</label> <a href="javascript:;" id="hideopenid"
-              class='small' style="display:none;" name=
-              "hideopenid">login using standard user name /
-              password</a> <input class="default-field" id=
-              "user_session_openid_identifier" name=
-              "user_session[openid_identifier]" size="30" type=
-              "text" /></li>
-            </ol>
-
-            <ol class='last'>
-              <li><input class="default-checkbox" id=
-              "user_session_remember_me" name=
-              "user_session[remember_me]" type="checkbox" value=
-              "1" /><input name="user_session[remember_me]" type=
-              "hidden" value="0" /><label for=
-              "user_session_remember_me">Remember me</label></li>
-            </ol>
-
-            <ol class="buttons">
-              <li><input class="default-btn" name="commit" type=
-              "submit" value="Login" /></li>
-
-              <li><a href="#">register</a></li>
-            </ol>
-          </fieldset>
-        </form>
-		<form action="some_action" method="post" class="">
-          <fieldset class="vertical">
-            <ol>
-              <li><label for="user_session_login">Login</label>
-              <a href="javascript:;" title="OpenID" id="showopenid"
-              class='small' style="display:none;" name=
-              "showopenid">login using OpenID</a> <input class=
-              "default-field" id="user_session_login" name=
-              "user_session[login]" size="30" type="text" /></li>
-
-              <li><label for="user_session_password">Password</label>
-              <a href="#" class='small'>forgot?</a> <input class=
-              "default-field" id="user_session_password" name=
-              "user_session[password]" size="30" type=
-              "password" /></li>
-
-              <li><label for="mywishlist">Wish list</label>
-              <select name="mywishlist">
-                <option value="1">
-                  Honda
-                </option>
-
-                <option value="1">
-                  Suzuki
-                </option>
-              </select></li>
-            </ol>
-
-            <ol id='openidform'>
-              <li><label for="user_session_openid_identifier">Openid
-              identifier</label> <a href="javascript:;" id="hideopenid"
-              class='small' style="display:none;" name=
-              "hideopenid">login using standard user name /
-              password</a> <input class="default-field" id=
-              "user_session_openid_identifier" name=
-              "user_session[openid_identifier]" size="30" type=
-              "text" /></li>
-            </ol>
-
-            <ol class='last'>
-              <li><input class="default-checkbox" id=
-              "user_session_remember_me" name=
-              "user_session[remember_me]" type="checkbox" value=
-              "1" /><input name="user_session[remember_me]" type=
-              "hidden" value="0" /><label for=
-              "user_session_remember_me">Remember me</label></li>
-            </ol>
-
-            <ol class="buttons">
-              <li><input class="default-btn" name="commit" type=
-              "submit" value="Login" /></li>
-
-              <li><a href="#">register</a></li>
-            </ol>
-          </fieldset>
-        </form>
-        <table class="basetable" cellpadding="0" cellspacing="0">
-          <tr>
-            <th>Project name</th>
-
-            <th>Company</th>
-
-            <th>Costs</th>
-          </tr>
-
-          <tr>
-            <td class="blue">Layout (re-design)</td>
-
-            <td class="blue">Builtit</td>
-
-            <td class="blue">1000.0</td>
-
-            <td class="yellow"><a href="#">Show</a></td>
-
-            <td class="yellow"><a href="#">Edit</a></td>
-
-            <td class="yellow"><a href="#">Destroy</a></td>
-          </tr>
-
-          <tr>
-            <td class="blue">Web CMS</td>
-
-            <td class="blue">Dropit</td>
-
-            <td class="blue">200.0</td>
-
-            <td class="yellow"><a href="#">Show</a></td>
-
-            <td class="yellow"><a href="#">Edit</a></td>
-
-            <td class="yellow"><a href="#">Destroy</a></td>
-          </tr>
-        </table>
-            
-    </div><!-- main content -->
+    <div class="grid_17 main" ></div><!-- main content -->
 	<!-- grid_6 right sidebar -->
 	<div class="grid_6 main right" >
-      <div id="adv">
-        <p>Advertising</p>
-      </div>
-
-      <div id="shortnews">
-        <div class="news">
-          <h3><a href="#">Tip 1</a></h3>
-
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          Ut pretium mauris nec arcu.</p>
-        </div>
-
-        <h3><a href="#" >Tip 2</a></h3>
-
-        <p>Aliquam lacus massa, pellentesque sit amet, feugiat et,
-        cursus volutpat, massa. Integer nibh. Maecenas mattis ipsum a
-        felis.</p>
-
-        <div class="important green">
-          <h3><a href="#">This is also important</a></h3>
-
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          Ut pretium mauris nec arcu. Integer at leo vel ipsum
-          elementum sodales. Nam est quam, posuere non, feugiat nec,
-          consectetuer ac, lectus. Aenean faucibus. Suspendisse
-          euismod, leo ut pretium ornare, libero arcu malesuada ipsum,
-          at convallis pede augue at arcu. Aliquam lacus massa,
-          pellentesque sit amet, feugiat et, cursus volutpat,
-          massa.</p>
-        </div>
-
-        <div class="important blue">
-          <h3><a href="#">Important</a></h3>
-
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          Ut pretium mauris nec arcu. Integer at leo vel ipsum
-          elementum sodales. Nam est quam, posuere non, feugiat nec,
-          consectetuer ac, lectus. Aenean faucibus. Suspendisse
-          euismod, leo ut pretium ornare, libero arcu malesuada ipsum,
-          at convallis pede augue at arcu. Aliquam lacus massa,
-          pellentesque sit amet, feugiat et, cursus volutpat,
-          massa.</p>
-        </div>
-      </div>
-    </div><!-- grid_6 right sidebar -->
-	
-	
+		
+	</div><!-- grid_6 right sidebar -->
+		
 	<div class="clear"></div>
-	<!-- further content -->
-	<div class="grid_24" >
-		<div class="grid_6 left section-list" >
-        <h3>Section List</h3>
-
-        <ul>
-          <li><a href="#">Lorem ipsum dolor</a></li>
-
-          <li><a href="#">Lorem ipsum dolor</a></li>
-
-          <li><a href="#">Aenean velit nisl, hendrerit eget, rutrum
-          quis, lobortis nec, libero. Nulla venenatis, turpis eu
-          vestibulum tincidunt, felis diam luctus velit,
-          facilisis</a></li>
-
-          <li><a href="#">Lorem ipsum dolor sit amet,
-          consectetuer</a></li>
-
-          <li><a href="#">Lorem ipsum dolor sit amet,
-          consectetuer</a></li>
-        </ul>
-      			
-		</div>
-		<div class="grid_17" id="right">
-			<div class="grid_8 list">
-          <ul>
-            <li><a href="#">Lorem ipsum dolor sit amet,
-            consectetuer</a></li>
-
-            <li><a href="#">Lorem ipsum dolor sit amet,
-            consectetuer</a></li>
-
-            <li><a href="#">Lorem ipsum dolor sit amet,
-            consectetuer</a></li>
-
-            <li><a href="#">Lorem ipsum dolor sit amet,
-            consectetuer</a></li>
-
-            <li><a href="#">Lorem ipsum dolor sit amet,
-            consectetuer</a></li>
-          </ul>
-        				
-			</div>
-			<div class="grid_8 list">
-          <ul>
-            <li><a href="#">Lorem ipsum dolor sit amet,
-            consectetuer</a></li>
-
-            <li><a href="#">Lorem ipsum dolor sit amet,
-            consectetuer</a></li>
-
-            <li><a href="#">Lorem ipsum dolor sit amet,
-            consectetuer</a></li>
-
-            <li><a href="#">Lorem ipsum dolor sit amet,
-            consectetuer</a></li>
-
-            <li><a href="#">Lorem ipsum dolor sit amet,
-            consectetuer</a></li>
-          </ul>
-        				
-			</div>
-			<p class="border">Lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Ut pretium mauris nec arcu. Integer at leo vel
-        ipsum elementum sodales. Nam est quam, posuere non, feugiat
-        nec, consectetuer ac, lectus. Aenean faucibus. Suspendisse
-        euismod, leo ut pretium ornare, libero arcu malesuada ipsum, at
-        convallis pede augue at arcu. Aliquam lacus massa, pellentesque
-        sit amet, feugiat et, cursus volutpat, massa.</p>
-		</div>
-	</div>
-    
-	<!-- further content -->
-	<div class="clear"></div>
+	
 	<!-- footer -->
 	<div class="grid_24" id="footer">
 		<div class="grid_17 left">
 		
-          <p>? Copyright <a hrf=
-          "http://www.mymanufactory.com/">mymanufactory.com</a> ?
-          Created by <a href=
-          "http://www.mymanufactory.com/">newman</a></p>
-        
+          <p>&copy; Copyright <a hrf="http://www.mksoftware.in/">MK Software</a> </p>
+		  <p>          Created by <a href=
+          "http://www.mksoftware.in/harshalshah">Harshal Shah</a></p>
+			
 		</div>
 		<div class="grid_6 right">
 		
-          <h4>MyManufactory RSS</h4>
+          <h4>RSS Feed</h4>
 
           <ul>
             <li><a href=
-            "http://www.mymanufactory.com/2009/1/16/zmiany">Zmiany...</a></li>
+            "http://www.mksoftware.in/rss">Feed me</a></li>
 
-            <li><a href=
-            "http://www.mymanufactory.com/2009/1/1/merb-is-rails-rails-is-merb">
-            Merb is Rails, Rails is Merb</a></li>
+            <li><a href="http://www.github.com/harshals">
+           My Projects</a></li>
           </ul>
         		</div>
        
