@@ -1,4 +1,8 @@
 
-importing mnowakowski work to 960.gs and less.js
+importing mnowakowski work to 960.gs ,less.js and sammy.js
 
 please refer to mnowakowski/css-template for original implementation
+
+index.html -> NON-SAMMY version
+
+ajax.html -> SAMMY version
