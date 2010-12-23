@@ -30,15 +30,16 @@
 
     <script type="text/javascript">
 	
-	   ;(function($) {
-		var app = $.sammy('#content', function() {
+	;(function($) {
+		var main_menu = $.sammy('.main-menu', function() {
         this.debug = true;
         var form_fields = null;
 		
-		this.before(/home|table|form|overview|menu/, function(context) {
-
+		this.before( function(context) {
+			
+			//context.log(context);
 			var path = context.path;
-			var el = $("#navlist").find('a[href="' + path + '"]');
+			var el = $(".main-menu").find('a[href="' + path + '"]');
 			
 			$(el).parent("li").siblings("li").removeClass("active");
 			$(el).parent("li").addClass("active");
@@ -47,6 +48,12 @@
 			$("#content-sidebar").html('');
 			$("#content-extra").html('');
 		});	
+		
+		/* Main Menu Selections */
+		
+		this.get('#/', function() {
+				this.redirect("#/home");
+		});
 		
         this.get('#/home', function() {
 		  
@@ -60,7 +67,10 @@
 		this.get('#/form', function() {
 		  
           this.render('views/form.html').replace("#content-main");
-		  this.render('views/form-sidebar.html').replace("#content-sidebar");
+		  
+		  this.render('views/form-menu.html').appendTo("#content-sidebar");
+		  
+		  this.render('views/form-sidebar.html').appendTo("#content-sidebar");
 		});
 		this.get('#/overview', function() {
 		  
@@ -76,7 +86,35 @@
           this.render('views/menu.html').replace("#content-sidebar");
 		});
 		
-      });
+		/* Sub Menu Selections */
+	  
+		  
+		
+      	});
+	  
+		var section_menu = $.sammy('#content-sidebar', function() {
+        this.debug = true;
+        var form_fields = null;
+		
+		this.before( function(context) {
+			
+			//$("#content-main").html('');
+		});	
+		
+		/* Main Menu Selections */
+		
+		this.get('#/form-login', function(context) {
+		
+			this.render('views/tables.html').replace("#content-main");
+		});
+
+		this.get("#/", function() {
+			
+			return;
+		});
+	
+	});
+
 
       $(function() {
 	  
@@ -84,7 +122,9 @@
 
 		
 		
-		app.run('#/home');
+		main_menu.run('#/home');
+		section_menu.run('#/');
+
 		//$("#home").parent("li").click();
 		//$("#home").click();
 		
@@ -153,9 +193,8 @@
 	<!-- header -->
     <div class="clear"></div><!-- sidebar form container -->
     <!-- menu -->
-	<div class="grid_24" id="">
-      <div id="navcontainer" class="">
-        <ul id="navlist">
+      <div  class="main-menu grid_24">
+        <ul >
           <li class="" ><a href="#/home"  name=
           "current">Home</a></li>
 
@@ -170,7 +209,6 @@
 	
 			<li class="right"> <a href="#/profile" id="profile">John Simth</a></li>
         </ul>
-	</div>
 	   
 
     </div>
