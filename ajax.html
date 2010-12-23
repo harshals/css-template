@@ -34,38 +34,64 @@
 		var app = $.sammy('#content', function() {
         this.debug = true;
         var form_fields = null;
+		
+		this.before(/home|table|form|overview|menu/, function(context) {
 
-        this.get('#/', function() {
+			var path = context.path;
+			var el = $("#navlist").find('a[href="' + path + '"]');
+			
+			$(el).parent("li").siblings("li").removeClass("active");
+			$(el).parent("li").addClass("active");
+			
+			$("#content-main").html('');
+			$("#content-sidebar").html('');
+			$("#content-extra").html('');
+		});	
+		
+        this.get('#/home', function() {
 		  
-          this.render('views/index.html').appendTo("#content-main");
+          this.render('views/index.html').replace("#content-main");
         });
 		
 		this.get('#/table', function() {
 		  
-          this.render('views/table.html').appendTo("#content-main");
+          this.render('views/tables.html').replace("#content-main");
 		});
 		this.get('#/form', function() {
 		  
-          this.render('views/form.html').appendTo("#content-main");
+          this.render('views/form.html').replace("#content-main");
+		  this.render('views/form-sidebar.html').replace("#content-sidebar");
 		});
 		this.get('#/overview', function() {
 		  
-          this.render('views/overview-main.html').appendTo("#content-main");
+          this.render('views/overview-main.html').replace("#content-main");
 		  
-		  this.render('views/overview-sidbar.html').appendTo("#content-sidebar");
+		  this.render('views/overview-sidebar.html').replace("#content-sidebar");
 
-		  this.render('views/overview-extra.html').appendTo("#content-extra");
+		  this.render('views/overview-extra.html').replace("#content-extra");
 		});
 			
 		this.get('#/menu', function() {
 		  
-          this.render('views/menu.html').appendTo("#content-main");
+          this.render('views/menu.html').replace("#content-sidebar");
 		});
 		
       });
 
       $(function() {
-        app.run('#/');
+	  
+	  
+
+		
+		
+		app.run('#/home');
+		//$("#home").parent("li").click();
+		//$("#home").click();
+		
+				
+
+		
+
       });
 
     })(jQuery);
@@ -130,19 +156,19 @@
 	<div class="grid_24" id="">
       <div id="navcontainer" class="">
         <ul id="navlist">
-          <li class="active" ><a href="index.html"  name=
+          <li class="" ><a href="#/home"  name=
           "current">Home</a></li>
 
-          <li class=""><a href="forms.html">Forms</a></li>
+          <li class=""><a href="#/form">Forms</a></li>
 
-          <li ><a href="tables.html">Tables</a></li>
+          <li ><a href="#/table">Tables</a></li>
 
-          <li><a href="menu.html">Menu</a></li>
+          <li><a href="#/menu">Menu</a></li>
 
-          <li><a href="overview.html">Overview</a></li>
-		  <li class="right"> <a href="#" id="logout">Logout</a></li>
+          <li><a href="#/overview">Overview</a></li>
+		  <li class="right"> <a href="#/logout" id="logout">Logout</a></li>
 	
-			<li class="right"> <a href="#" id="profile">John Simth</a></li>
+			<li class="right"> <a href="#/profile" id="profile">John Simth</a></li>
         </ul>
 	</div>
 	   
