@@ -2,6 +2,9 @@
 	project:  Projectname
 	author:   Marcin Nowakowski (www.mymanufactory.com) 
 */
+@import "css/reset.css";
+@import "css/960_24_col.css";
+
 
 *{ margin: 0; padding: 0; } 
 body { font: .85em Arial, Helvetica, sans-serif; line-height: 1.6em; background: #fff; color: #444;}
@@ -55,11 +58,11 @@ fieldset {
 
 	background: #ffc; border: 2px solid #edf495; padding: 20px 15px 20px 25px ; margin: 0 0 20px;
 	
-	ol li {list-style: none; margin-bottom: 15px;}
+	ol li {list-style: none; margin-bottom: 0px; padding-top:15px;}
 	
 	ol.buttons li {display:inline; vertical-align:middle}
 	
-	li.last { padding-bottom: 10px; margin-bottom: 10px; border-bottom: 2px solid #edf495; }
+	li.last { padding-bottom: 25px; margin-bottom: 10px; border-bottom: 2px solid #edf495; }
 
 	input, textarea, select { padding: 6px; font-size: .9em; border: 2px solid #ccc ; }
 	
@@ -67,7 +70,7 @@ fieldset {
 
 	input.default-field {  outline:none; }
 	
-	textarea.default-field  { height:90px;  outline:none; }
+	textarea.default-field  { width:90% ; height:90px;  outline:none; }
 	
 	input.small-field { width: 50%; padding: 4px; outline:none;}
 	
@@ -79,18 +82,36 @@ fieldset {
 
 	:focus { background:#EFF5FF }
 
+	.label-inline {
+		float:right !important;
+	}
+
 }
 
 fieldset.vertical {
 
-	input[type=text],  textarea, select {  display : block; width: 90% }
+	input,  textarea, select ,checkbox, radio{  display : block; width: 90% }
 }
-
+.grid_10 {
+	width:390px;
+}
+.grid_5 {
+	width:190px
+}
+fieldset.horizontal {
+	
+	li {clear:both; 
+	
+		input[type!=checkbox],input[type!=radio],select,textarea { .grid_10 ; .right;}
+		label { .grid_5 ; .left; text-align:right; }
+		span,a { .right ;margin-top:2px;}
+	}
+}
 
 #logo { float: left; color: #808080; margin: 0 0 5px 0; line-height: 25px; }
 #line-top { clear: both; padding: 3px; margin: 0 0 25px; background: transparent; border-bottom: 2px solid #7ECBDF; }	
 
-.main-menu {
+#main-menu {
 
 	ul { 
 		padding-left: 0; margin: 0 0 25px 0; height:30px; float: left; width: 100%; border-bottom: 2px solid #7ECBDF;
@@ -102,7 +123,7 @@ fieldset.vertical {
 	}
 	li.active a { color: #fff; background: #47A4BE }
 }
-.section-menu {
+#section-menu {
 	
  	background: none repeat scroll 0 0 #DDE3EB;
 	padding: 10px 15px; margin: 0 0 20px;

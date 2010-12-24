@@ -11,16 +11,16 @@
   "text/html; charset=iso-8859-1" />
   <meta name="description" content="App Name app" />
   <meta name="keywords" content="App Name" />
-  <link rel="stylesheet" href="css/reset.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="css/reset.css" type="text/css" /> -->
   <!-- <link rel="stylesheet" href="css/text.css" type="text/css" />-->
  
-  <link rel="stylesheet" href="css/960_24_col.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="css/960_24_col.css" type="text/css" /> -->
   
-    <link rel="stylesheet/less" href="css/main.css" type="text/css"> 
-	<script src="javascript/less.js" type="text/javascript"></script>
+  <link rel="stylesheet/less" href="css/main.css" type="text/css"> 
+  <script src="javascript/less.js" type="text/javascript"></script>
 
   <script type="text/javascript" src="javascript/jquery.js"></script>
-    <script type="text/javascript" src="javascript/sammy/sammy.js"></script>
+  <script type="text/javascript" src="javascript/sammy/sammy.js"></script>
 
   <script type="text/javascript" src="javscript/jquery.tablehover.min.js">
   
@@ -31,7 +31,7 @@
     <script type="text/javascript">
 	
 	;(function($) {
-		var main_menu = $.sammy('.main-menu', function() {
+		var main_menu = $.sammy('#main-menu', function() {
         this.debug = true;
         var form_fields = null;
 		
@@ -39,14 +39,15 @@
 			
 			//context.log(context);
 			var path = context.path;
-			var el = $(".main-menu").find('a[href="' + path + '"]');
+			var el = $("#main-menu").find('a[href="' + path + '"]');
 			
 			$(el).parent("li").siblings("li").removeClass("active");
 			$(el).parent("li").addClass("active");
 			
-			$("#content-main").html('');
-			$("#content-sidebar").html('');
+			$("#main-content").html('');
+			$("#sidebar-content").html('');
 			$("#content-extra").html('');
+			$("#section-menu").html('');
 		});	
 		
 		/* Main Menu Selections */
@@ -57,33 +58,30 @@
 		
         this.get('#/home', function() {
 		  
-          this.render('views/index.html').replace("#content-main");
+          this.render('views/index.html').replace("#main-content");
         });
 		
 		this.get('#/table', function() {
 		  
-          this.render('views/tables.html').replace("#content-main");
+          this.render('views/tables.html').replace("#main-content");
 		});
 		this.get('#/form', function() {
 		  
-          this.render('views/form.html').replace("#content-main");
+		  this.render('views/form-menu.html').replace("#section-menu");
 		  
-		  this.render('views/form-menu.html').appendTo("#content-sidebar");
-		  
-		  this.render('views/form-sidebar.html').appendTo("#content-sidebar");
 		});
 		this.get('#/overview', function() {
 		  
-          this.render('views/overview-main.html').replace("#content-main");
+          this.render('views/overview-main.html').replace("#main-content");
 		  
-		  this.render('views/overview-sidebar.html').replace("#content-sidebar");
+		  this.render('views/overview-sidebar.html').replace("#sidebar-content");
 
 		  this.render('views/overview-extra.html').replace("#content-extra");
 		});
 			
 		this.get('#/menu', function() {
 		  
-          this.render('views/menu.html').replace("#content-sidebar");
+          this.render('views/menu.html').replace("#section-menu");
 		});
 		
 		/* Sub Menu Selections */
@@ -92,21 +90,33 @@
 		
       	});
 	  
-		var section_menu = $.sammy('#content-sidebar', function() {
+		var section_menu = $.sammy('#sidebar-content', function() {
         this.debug = true;
         var form_fields = null;
 		
 		this.before( function(context) {
 			
-			//$("#content-main").html('');
+			//$("#main-content").html('');
 		});	
 		
 		/* Main Menu Selections */
 		
 		this.get('#/form-login', function(context) {
 		
-			this.render('views/tables.html').replace("#content-main");
+			this.render('views/form-login.html').replace("#main-content");
 		});
+
+		this.get('#/form-vertical', function(context) {
+		
+			this.render('views/form-sidebar.html').replace("#sidebar-content");
+		});
+		
+		this.get('#/form-large', function(context) {
+		
+			this.render('views/form-large.html').replace("#main-content");
+		});
+
+
 
 		this.get("#/", function() {
 			
@@ -193,7 +203,7 @@
 	<!-- header -->
     <div class="clear"></div><!-- sidebar form container -->
     <!-- menu -->
-      <div  class="main-menu grid_24">
+      <div  class="grid_24" id="main-menu">
         <ul >
           <li class="" ><a href="#/home"  name=
           "current">Home</a></li>
@@ -215,9 +225,14 @@
 	<!-- menu -->
     <div class="clear"></div>
 	<!-- main content -->
-    <div class="grid_17 main" id="content-main"></div><!-- main content -->
+    <div class="grid_17 main" id="main-content"></div><!-- main content -->
 	<!-- grid_6 right sidebar -->
-	<div class="grid_6 main right" id="content-sidebar" ></div><!-- grid_6 right sidebar -->
+	<div class="grid_6 main right "  >
+		
+		<div id="section-menu"></div>
+		<div class="" id="sidebar-content"></div>
+
+	</div><!-- grid_6 right sidebar -->
 		
 	<div class="clear"></div>
 	<!-- further content -->
