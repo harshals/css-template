@@ -107,7 +107,8 @@
 		});
 
 		this.get('#/form-vertical', function(context) {
-		
+			
+			this.render('views/form-sidebar.html').replace("#main-content");
 			this.render('views/form-sidebar.html').replace("#sidebar-content");
 		});
 		

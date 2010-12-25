@@ -90,16 +90,19 @@ fieldset {
 
 }
 
-fieldset.vertical {
-
-	input,  textarea, select ,checkbox, radio{  display : block; width: 90% }
-}
 .grid_10 {
 	width:390px;
 }
 .grid_5 {
-	width:190px
+	width:190px;
 }
+fieldset.vertical {
+
+	input,  textarea, select {  display : block; width:90% }
+
+	input[type=checkbox], input[type=radio], input[type=button], input[type=submit] { display:inline; width:auto;}
+}
+
 fieldset.horizontal {
 	
 	li {
