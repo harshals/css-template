@@ -96,6 +96,14 @@ fieldset {
 .grid_5 {
 	width:190px;
 }
+
+@cols : 24;
+@width:960px;
+@filler:10px;
+@main: @width / @cols * 17 - @filler;
+@sidbear : @width / @cols * 6 - @filler;
+
+
 fieldset.vertical {
 
 	input,  textarea, select {  display : block; width:90% }
@@ -103,18 +111,41 @@ fieldset.vertical {
 	input[type=checkbox], input[type=radio], input[type=button], input[type=submit] { display:inline; width:auto;}
 }
 
+fieldset.horizontal-half {
+	
+	li {
+		clear:both; 
+	
+		input,select,textarea { width: @main / 2 * 70/100; .right;}
+
+		input[type=checkbox], input[type=radio], input[type=button], input[type=submit] { width:auto;}
+		
+		label { width: @main / 2 * 20/100; .left; text-align:right; }
+		
+		label.inline { float:right;width:auto; } 
+		
+		span,a { .right ;margin-top:2px;}
+	}
+}
+
 fieldset.horizontal {
 	
 	li {
 		clear:both; 
 	
-		input,select,textarea { .grid_10 ; .right;}
+		input,select,textarea { width: @main * 70/100; .right;}
+
 		input[type=checkbox], input[type=radio], input[type=button], input[type=submit] { width:auto;}
-		label { .grid_5 ; .left; text-align:right; }
+		
+		label { width: @main * 20/100; .left; text-align:right; }
+		
 		label.inline { float:right;width:auto; } 
+		
 		span,a { .right ;margin-top:2px;}
 	}
 }
+
+
 
 #logo { float: left; color: #808080; margin: 0 0 5px 0; line-height: 25px; }
 #line-top { clear: both; padding: 3px; margin: 0 0 25px; background: transparent; border-bottom: 2px solid #7ECBDF; }	
