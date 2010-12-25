@@ -74,7 +74,9 @@ fieldset {
 	
 	input.small-field { width: 50%; padding: 4px; outline:none;}
 	
-	input.default-checkbox { margin-right: 10px; background: transparent; border:none }
+	input.default-checkbox { margin-right: 10px; margin-top: 0.2em; margin-left:10px; background: transparent; border:none }
+	
+	input.default-radio{ margin-right: 10px; margin-top: 0.2em; margin-left:10px; background: transparent; border:none }
 	
 	input.default-btn { padding-right:10px; padding-left:10px; background: #7cc92d; color: #fff; border-color: #69ab24;  font-weight: bold; margin-right: 10px;}
 	
@@ -100,10 +102,13 @@ fieldset.vertical {
 }
 fieldset.horizontal {
 	
-	li {clear:both; 
+	li {
+		clear:both; 
 	
-		input[type!=checkbox],input[type!=radio],select,textarea { .grid_10 ; .right;}
+		input,select,textarea { .grid_10 ; .right;}
+		input[type=checkbox], input[type=radio], input[type=button], input[type=submit] { width:auto;}
 		label { .grid_5 ; .left; text-align:right; }
+		label.inline { float:right;width:auto; } 
 		span,a { .right ;margin-top:2px;}
 	}
 }
