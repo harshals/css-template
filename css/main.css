@@ -83,10 +83,12 @@ p.border { clear: both; border-left: 4px solid #ccc; padding: 0 0 0 15px; }
 .lightgrey { color:#ccc;}
 .light { font-weight: normal;}
 .italic { font-style:italic;}
-.blk { display: block; padding: 0 0 4px 0;}
-
+.blk { display: block; }
+.no-padding-margin{ padding:0px;margin:0px;}
 .text-green-bg { padding: 5px; background-color: #F0FDE2; }
-
+.box { padding:5px; border:2px solid;margin:5px 0 0 0; }
+.no-border { border:none; }
+.group { margin-left:5px;margin-top:5px;  border: none;  }
 
 h1 { color:#5c5c5c; margin: 15px 0 0; letter-spacing: -1px; 
 
@@ -104,7 +106,10 @@ h3 { color:#666 ;
 #content {  border-top: 5px solid #8fd448; background: #fff}
 
 #top{ float: right; text-align: right;}
-form { margin: 0; padding: 0; display:block;}
+
+form { 
+	padding: 10px 10px 10px 10px ; margin: 0 0 10px;display:block;
+}
 
 form#search_engine {
 
@@ -117,75 +122,89 @@ form#search_engine {
 
 fieldset { 
 
-	background: #ffc; border: 2px solid #edf495; padding: 10px 7.5px 10px 15px ; margin: 0 0 10px;
-	
 	ol li {list-style: none; margin-bottom: 0px; padding-top:7.5px;}
+	
+	ol li ul li {list-style: none; margin-bottom: 0px; padding-top:2px;}
+	
+	ol li ul li * {width:auto; }
 	
 	ol.buttons li {display:inline; vertical-align:middle}
 	
 	li.last { padding-bottom: 25px; margin-bottom: 10px; border-bottom: 2px solid #edf495; }
 
-	input, textarea, select { padding: 6px; font-size: .9em; border: 2px solid #ccc ; }
+	input, textarea, select,label.inline { padding: 6px; font-size: .9em; border: 2px solid #ccc ; }
 	
 	option {  margin : 6px ;border-bottom : 1px solid #edf495; }
 
-	input.default-field {  outline:none; }
+	input {  outline:none; }
 	
-	textarea.default-field  { width:90% ; height:90px;  outline:none; }
+	textarea  { width:90% ; height:90px;  outline:none; }
 	
-	input.small-field { width: 50%; padding: 4px; outline:none;}
+	input.small { width: 50%; padding: 4px; outline:none;}
 	
-	input.default-checkbox { margin-right: 10px; margin-top: 0.2em; margin-left:10px; background: transparent; border:none }
+	input[type=checkbox],input[type=radio] { margin-right: 10px; margin-top: 0.2em; margin-left:10px; background: transparent; border:none }
 	
-	input.default-radio{ margin-right: 10px; margin-top: 0.2em; margin-left:10px; background: transparent; border:none }
+	input.button { padding-right:10px; padding-left:10px; background: #7cc92d; color: #fff; border-color: #69ab24;  font-weight: bold; margin-right: 10px; width:auto;}
 	
-	input.default-btn { padding-right:10px; padding-left:10px; background: #7cc92d; color: #fff; border-color: #69ab24;  font-weight: bold; margin-right: 10px;}
-	
-	input.small-btn { padding: 4px; background: #7cc92d; color: #fff; border-color: #69ab24; font-weight: bold; }
+	input.small-button { padding: 4px; background: #7cc92d; color: #fff; border-color: #69ab24; font-weight: bold; }
 
 	:focus { background:#EFF5FF }
 
-	.label-inline {
+	label,span.label { .left; text-align:right; margin-right:15px;margin-top:5px;}
+	label.inline {
+		
 		float:right !important;
+		display:inline;
+		border:none;
+		input {display:inline; width:auto !important;}
 	}
 
-	span.status { .icon ;  .right;  display:inline; background: url("icons/application_edit.png") no-repeat scroll left top transparent; }
+	span.status-help,span.status-error,span.status-ok { .icon ;  .right;  display:inline; margin-right:10px; margin-top:5px; }
+
+	span.status-ok{  background: url("icons/accept.png") no-repeat scroll left top transparent; }
+	span.status-help {  background: url("icons/help.png") no-repeat scroll left top transparent; }
+	span.status-error {  background: url("icons/cross.png") no-repeat scroll left top transparent; }
+
+	span.help,a { display:none; .right ;margin-top:2px; margin-bottom:2px; text-align:right; .small; color:#4896AC}
 }
-
-
 
 
 fieldset.vertical {
 
 	input,  textarea, select {  display : block; width:90% }
 
-	input[type=checkbox], input[type=radio], input[type=button], input[type=submit] { display:inline; width:auto;}
+	//input[type=checkbox], input[type=radio], input.button { display:inline; width:auto;}
 }
 
 
 fieldset.horizontal {
 	
 	li {
-		clear:both; 
+		//clear:both; 
 	
-		input,select,textarea { .grid_11; .left;}
+		input,select,textarea, label.inline { .grid_12; }
 
-		input[type=checkbox], input[type=radio], input[type=button], input[type=submit] { width:auto;}
+		label { .grid_4; }
 		
-		label { .grid_3; .left; text-align:right; margin-right:15px;}
-		
-		label.inline { width:auto; } 
-		
-		span.help,a { .right ;margin-top:2px; width:100% ;text-align:right; }
 
+		span.help,a { .grid_16 }
+		
 	}
 }
 
 fieldset.half {
+		
+		.grid_8;
+		
+		label { width:100px !important}
+		
+		input,select,textarea, label.inline { width:130px !important; }
+		
+	
 
-		input,select,textarea,label { width:110px !important; }
-		label.inline, input[type=checkbox], input[type=radio], input[type=button], input[type=submit] { width:auto !important; .right; margin-bottom:10px;}
-		span.help,a { width:100% !important;}
+		label.inline, input.button { .right; margin-bottom:10px;}
+		
+		span.help,a { width:100% !important; }
 }
 
 
@@ -278,21 +297,21 @@ fieldset.half {
 	
 
 .notice {
-	padding: 5px; text-align: center; font-size: small; margin: 5px 0;
+	text-align: center; font-size: small; 
 	p { text-align: center; margin: 0; padding:0 }
 }
 
 
 .positive { 
-	background: #D5EEAA; color: #4F940F; border: solid 2px #B2DB6B; 
+	background-color: #D5EEAA; color: #4F940F; border-color: #B2DB6B; 
    p a { color: #4F940F; }
 }
 .negative{ 
-	background-color: #FFD3D3; color: #c00; border: solid 2px #FFAFAF; 
+	background-color: #FFD3D3; color: #c00; border-color: #FFAFAF; 
 	p a { color: #c00; }
 }
 .neutral{ 
-	background-color: #dcebff; color: #2a8cb7; border: solid 2px #a7d1ff; 
+	background-color: #dcebff; color: #2a8cb7; border-color: #a7d1ff; 
 	p a { color: #2a8cb7; }
 }
 	
@@ -304,6 +323,7 @@ fieldset.half {
 }
 .green { border-color: #8fd448; background: #F0FDE2 }
 .blue { border-color: #47A4BE; background: #EFF5FF }
+.yellow { border-color: #edf495; background: none repeat scroll 0 0 #FFFFCC }
 
 .list {
 	li { list-style: none; border-bottom: 1px solid #eee; margin: 0; padding: 4px 4px 4px 12px; background: url(images/arrow.gif) no-repeat 0 .8em }
