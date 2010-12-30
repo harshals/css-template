@@ -122,7 +122,7 @@ form#search_engine {
 
 fieldset { 
 
-	ol li {list-style: none; margin-bottom: 0px; padding-top:7.5px;}
+	ol li {list-style: none; margin-bottom: 0px; padding-top:7px;}
 	
 	ol li ul li {list-style: none; margin-bottom: 0px; padding-top:2px;}
 	
@@ -132,17 +132,17 @@ fieldset {
 	
 	li.last { padding-bottom: 25px; margin-bottom: 10px; border-bottom: 2px solid #edf495; }
 
-	input, textarea, select,label.inline { padding: 6px; font-size: .9em; border: 2px solid #ccc ; }
+	input, textarea, select { padding: 6px; font-size: .9em; border: 2px solid #ccc ; }
 	
 	option {  margin : 6px ;border-bottom : 1px solid #edf495; }
 
 	input {  outline:none; }
 	
-	textarea  { width:90% ; height:90px;  outline:none; }
+	textarea  {  height:90px;  outline:none; }
 	
-	input.small { width: 50%; padding: 4px; outline:none;}
+	textarea.small  {  height:40px;  outline:none; }
 	
-	input[type=checkbox],input[type=radio] { margin-right: 10px; margin-top: 0.2em; margin-left:10px; background: transparent; border:none }
+	input.checkbox, input.radio { margin-right: 10px; margin-top: 0.2em; margin-left:10px; background: transparent; border:none }
 	
 	input.button { padding-right:10px; padding-left:10px; background: #7cc92d; color: #fff; border-color: #69ab24;  font-weight: bold; margin-right: 10px; width:auto;}
 	
@@ -151,13 +151,8 @@ fieldset {
 	:focus { background:#EFF5FF }
 
 	label,span.label { .left; text-align:right; margin-right:15px;margin-top:5px;}
-	label.inline {
-		
-		float:right !important;
-		display:inline;
-		border:none;
-		input {display:inline; width:auto !important;}
-	}
+
+	
 
 	span.status-help,span.status-error,span.status-ok { .icon ;  .right;  display:inline; margin-right:10px; margin-top:5px; }
 
@@ -169,42 +164,36 @@ fieldset {
 }
 
 
-fieldset.vertical {
+fieldset.vertical_8 {
 
-	input,  textarea, select {  display : block; width:90% }
+	input,  textarea, select {  display : block; .grid_7; }
 
-	//input[type=checkbox], input[type=radio], input.button { display:inline; width:auto;}
 }
 
 
-fieldset.horizontal {
+fieldset.horizontal_16 {
 	
 	li {
-		//clear:both; 
-	
-		input,select,textarea, label.inline { .grid_12; }
+		input,select,textarea, { .grid_12; }
 
 		label { .grid_4; }
-		
 
-		span.help,a { .grid_16 }
+		span.help,a { .grid_15 }
 		
 	}
 }
 
-fieldset.half {
+fieldset.horizontal_8 {
 		
 		.grid_8;
 		
-		label { width:100px !important}
+		label { .grid_3 }
 		
-		input,select,textarea, label.inline { width:130px !important; }
+		input,select,textarea { .grid_4 }
 		
-	
-
-		label.inline, input.button { .right; margin-bottom:10px;}
+		input.button { .right; margin-bottom:10px;}
 		
-		span.help,a { width:100% !important; }
+		span.help,a { .grid_7 }
 }
 
 
@@ -263,8 +252,6 @@ fieldset.half {
     	text-transform: uppercase;
 		
 	}
-	
-
 	
 }
 
