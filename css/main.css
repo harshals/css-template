@@ -1,10 +1,11 @@
 
 @import "css/reset.css";
-
 /* 960 */
 @w:960px;
 @c:24;
 @gutter:10px;
+
+/* 960 gs */
 
 body
 {
@@ -29,7 +30,7 @@ body
 }
 .alpha { margin-left: 0; } .omega { margin-right: 0; } .gutter { width: @gutter;}
 
- .grid_1 { width: 30px; } .grid_2 { width: 70px; } .grid_3 { width: 110px; } .grid_4 { width: 150px; } .grid_5 { width: 190px; } .grid_6 { width: 230px; } .grid_7 { width: 270px; } .grid_8 { width: 310px; } .grid_9 { width: 350px; } .grid_10 { width: 390px; } .grid_11 { width: 430px; } .grid_12 { width: 470px; } .grid_13 { width: 510px; } .grid_14 { width: 550px; } .grid_15 { width: 590px; } .grid_16 { width: 630px; } .grid_17 { width: 670px; } .grid_18 { width: 710px; } .grid_19 { width: 750px; } .grid_20 { width: 790px; } .grid_21 { width: 830px; } .grid_22 { width: 870px; } .grid_23 { width: 910px; } .grid_24 { width: 950px; }
+ .grid_1 { width: 30px !important; } .grid_2 { width: 70px !important; } .grid_3 { width: 110px !important; } .grid_4 { width: 150px !important; } .grid_5 { width: 190px !important; } .grid_6 { width: 230px !important; } .grid_7 { width: 270px !important; } .grid_8 { width: 310px !important; } .grid_9 { width: 350px !important; } .grid_10 { width: 390px !important; } .grid_11 { width: 430px !important; } .grid_12 { width: 470px !important; } .grid_13 { width: 510px !important; } .grid_14 { width: 550px !important; } .grid_15 { width: 590px !important; } .grid_16 { width: 630px !important; } .grid_17 { width: 670px !important; } .grid_18 { width: 710px !important; } .grid_19 { width: 750px !important; } .grid_20 { width: 790px !important; } .grid_21 { width: 830px !important; } .grid_22 { width: 870px !important; } .grid_23 { width: 910px !important; } .grid_24 { width: 950px !important; }
 
  .prefix_gutter { padding-left: @gutter; } .prefix_1 { padding-left: 40px; } .prefix_2 { padding-left: 80px; } .prefix_3 { padding-left: 120px; } .prefix_4 { padding-left: 160px; } .prefix_5 { padding-left: 200px; } .prefix_6 { padding-left: 240px; } .prefix_7 { padding-left: 280px; } .prefix_8 { padding-left: 320px; } .prefix_9 { padding-left: 360px; } .prefix_10 { padding-left: 400px; } .prefix_11 { padding-left: 440px; } .prefix_12 { padding-left: 480px; } .prefix_13 { padding-left: 520px; } .prefix_14 { padding-left: 560px; } .prefix_15 { padding-left: 600px; } .prefix_16 { padding-left: 640px; } .prefix_17 { padding-left: 680px; } .prefix_18 { padding-left: 720px; } .prefix_19 { padding-left: 760px; } .prefix_20 { padding-left: 800px; } .prefix_21 { padding-left: 840px; } .prefix_22 { padding-left: 880px; } .prefix_23 { padding-left: 920px; } 
 
@@ -60,11 +61,6 @@ body
 }
 
 /* end of 960 */
-
-/* 
-	project:  Projectname
-	author:   Marcin Nowakowski (www.mymanufactory.com) 
-*/
 
 
 *{ margin: 0; padding: 0; } 
@@ -97,6 +93,7 @@ h1 { color:#5c5c5c; margin: 15px 0 0; letter-spacing: -1px;
 img { border: 0; }
 h2 { color: #7cc92d; font-size: 1.8em; margin: 0 0 12px; letter-spacing: -1px; 
 	a { color: #7cc92d; text-decoration: none;}
+	display:block;
 }
 h3 { color:#666 ;
 
@@ -119,84 +116,6 @@ form#search_engine {
 	
 	input.small-btn { padding: 4px; background: #7cc92d; color: #fff; border-color: #69ab24; font-weight: bold; }
 }
-
-fieldset { 
-
-	ol li {list-style: none; margin-bottom: 0px; padding-top:7px;}
-	
-	ol li ul li {list-style: none; margin-bottom: 0px; padding-top:2px;}
-	
-	ol li ul li * {width:auto; }
-	
-	ol.buttons li {display:inline; vertical-align:middle}
-	
-	li.last { padding-bottom: 25px; margin-bottom: 10px; border-bottom: 2px solid #edf495; }
-
-	input, textarea, select { padding: 6px; font-size: .9em; border: 2px solid #ccc ; }
-	
-	option {  margin : 6px ;border-bottom : 1px solid #edf495; }
-
-	input {  outline:none; }
-	
-	textarea  {  height:90px;  outline:none; }
-	
-	textarea.small  {  height:40px;  outline:none; }
-	
-	input.checkbox, input.radio { margin-right: 10px; margin-top: 0.2em; margin-left:10px; background: transparent; border:none }
-	
-	input.button { padding-right:10px; padding-left:10px; background: #7cc92d; color: #fff; border-color: #69ab24;  font-weight: bold; margin-right: 10px; width:auto;}
-	
-	input.small-button { padding: 4px; background: #7cc92d; color: #fff; border-color: #69ab24; font-weight: bold; }
-
-	:focus { background:#EFF5FF }
-
-	label,span.label { .left; text-align:right; margin-right:15px;margin-top:5px;}
-
-	
-
-	span.status-help,span.status-error,span.status-ok { .icon ;  .right;  display:inline; margin-right:10px; margin-top:5px; }
-
-	span.status-ok{  background: url("icons/accept.png") no-repeat scroll left top transparent; }
-	span.status-help {  background: url("icons/help.png") no-repeat scroll left top transparent; }
-	span.status-error {  background: url("icons/cross.png") no-repeat scroll left top transparent; }
-
-	span.help,a { display:none; .right ;margin-top:2px; margin-bottom:2px; text-align:right; .small; color:#4896AC}
-}
-
-
-fieldset.vertical_8 {
-
-	input,  textarea, select {  display : block; .grid_7; }
-
-}
-
-
-fieldset.horizontal_16 {
-	
-	li {
-		input,select,textarea, { .grid_12; }
-
-		label { .grid_4; }
-
-		span.help,a { .grid_15 }
-		
-	}
-}
-
-fieldset.horizontal_8 {
-		
-		.grid_8;
-		
-		label { .grid_3 }
-		
-		input,select,textarea { .grid_4 }
-		
-		input.button { .right; margin-bottom:10px;}
-		
-		span.help,a { .grid_7 }
-}
-
-
 
 #logo { float: left; color: #808080; margin: 0 0 5px 0; line-height: 25px; }
 #line-top { clear: both; padding: 3px; margin: 0 0 25px; background: transparent; border-bottom: 2px solid #7ECBDF; }	
@@ -344,7 +263,10 @@ table.basetable {
 	td.hover, tr.hover { background-color: #fff9bd; }
 	th.hover, tfoot td.hover { background: #def3b8; }
 
-	.innertable  {
+	
+}
+
+table.innertable  {
 		
 		font-size:85%;
 		td,tr {
@@ -352,9 +274,6 @@ table.basetable {
 			padding:0px 0 0 2px;
 		}
 	}
-}
-
-
 table { 
 	border-collapse: collapse; border:0; border-style:none; border-spacing: 0; width: 100%; 
 	
@@ -410,3 +329,7 @@ pre { background-color: #eee; padding: 10px; font-size: 11px }
 
 	 background: url("icons/report.png") no-repeat scroll left top transparent;
 }
+
+/* override */
+
+

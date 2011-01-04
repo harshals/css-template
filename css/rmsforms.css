@@ -11,24 +11,28 @@
 /* CONTAINING DIV */
 .formContainer{ background-color:#efefef; overflow:hidden; height:1%; padding:10px; font-family:Arial, Helvetica, sans-serif; font-size:70%; line-height:120%;}
 
-/* GLOBALS */
+/* GLOBALS 
 
 body{ background-color:#000;}
 form{ margin:0; padding:0;}
-li{ width:100%; float:left;}
-ul{ margin:0; padding:0; list-style:none; overflow:hidden; height:1%; }
-fieldset{ margin-bottom:40px; display:block; } /*optional elememt */ 
+fieldset{  } 
 h2{ font-size:18px;}
-ul li ul{ background-color:#F8F3B8}
-em{color:#FF0000;}
 
-span.status-ok{  background: url("icons/accept.png") no-repeat scroll left top transparent; }
-
-
+*/
 fieldset { 
+	
+	margin-bottom:40px; display:block;
 
-	width:390px; 
+	legend { display:none; }
 
+	ul li{ width:100%; float:left;}
+
+	ul li ul{ background-color:#F8F3B8}
+
+	em{color:#FF0000;}
+	
+	ul{ margin:0; padding:0; list-style:none; overflow:hidden; height:1%; }
+	
 	li.buttons {display:inline; vertical-align:middle}
 	
 	li.last { padding-bottom: 25px; margin-bottom: 10px; border-bottom: 2px solid #edf495; }
@@ -66,7 +70,7 @@ fieldset {
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.form { margin:0 0 0 0; padding:10px; list-style:none; background-color:#FFFFFF;}
+.form { margin:0 0 0 0; padding:10px; list-style:none; }
 .form ul{ padding:2px 5px 5px 5px; overflow:hidden; height:1%; }
 .form label{ width:120px; padding:3px 5px 3px 0px; float:left; display:inline; }
 .form li{margin:3px 0 0 0;  padding-bottom:3px; }
