@@ -38,7 +38,9 @@
 			
 			app.before(/^#\/form-/, function(context) {
 
-				context.log("inisde form");
+				context.log("inisde form"); 
+				context.render('views/form-menu.html').replace("#section-menu");
+
 			});
 
 			app.get('#/form-login', function(context) {
@@ -48,6 +50,8 @@
 
 			app.get('#/form-vertical', function(context) {
 				
+				
+				context.log("inisde form vertixc");
 				context.render('views/form-sidebar.html').replace("#main-content");
 				context.render('views/form-sidebar.html').replace("#sidebar-content");
 			});
@@ -74,6 +78,8 @@
 			
 			//context.log(context);
 			
+			$("#sidebar-content").html('');
+			$("#content-extra").html('');
 		});	
 		
 		/* Do something if main menu is clicked */
@@ -87,8 +93,7 @@
 			$(el).parent("li").addClass("active");
 			
 			$("#main-content").html('');
-			$("#sidebar-content").html('');
-			$("#content-extra").html('');
+			
 			$("#section-menu").html('');
 		});
 
