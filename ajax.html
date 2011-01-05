@@ -32,14 +32,54 @@
 
     <script type="text/javascript">
 	
+	/* Handle all routes starting with #/form- */
+
+	FormsController = function(app) { with (app) {
+			
+			app.before(/^#\/form-/, function(context) {
+
+				context.log("inisde form");
+			});
+
+			app.get('#/form-login', function(context) {
+			
+				context.render('views/form-login.html').replace("#main-content");
+			});
+
+			app.get('#/form-vertical', function(context) {
+				
+				context.render('views/form-sidebar.html').replace("#main-content");
+				context.render('views/form-sidebar.html').replace("#sidebar-content");
+			});
+			
+			app.get('#/form-large', function(context) {
+			
+				context.render('views/form-large.html').replace("#main-content");
+			});
+			app.get('#/form-hybrid', function(context) {
+			
+				context.render('views/form-hybrid.html').replace("#main-content");
+			});
+
+		}};
+
 	;(function($) {
 		var main_menu = $.sammy('#main-menu', function() {
         this.debug = true;
         var form_fields = null;
 		
+		/* generic application wide before method */
+
 		this.before( function(context) {
 			
 			//context.log(context);
+			
+		});	
+		
+		/* Do something if main menu is clicked */
+
+		this.before(/(home|table|form|menu|overview)$/, function(context) {
+			
 			var path = context.path;
 			var el = $("#main-menu").find('a[href="' + path + '"]');
 			
@@ -50,8 +90,8 @@
 			$("#sidebar-content").html('');
 			$("#content-extra").html('');
 			$("#section-menu").html('');
-		});	
-		
+		});
+
 		/* Main Menu Selections */
 		
 		this.get('#/', function() {
@@ -89,65 +129,17 @@
 		/* Sub Menu Selections */
 	  
 		  
+		FormsController(this);
 		
-      	});
-	  
-		var section_menu = $.sammy('#sidebar-content', function() {
-        this.debug = true;
-        var form_fields = null;
-		
-		this.before( function(context) {
-			
-			//$("#main-content").html('');
-		});	
-		
-		/* Main Menu Selections */
-		
-		this.get('#/form-login', function(context) {
-		
-			this.render('views/form-login.html').replace("#main-content");
-		});
-
-		this.get('#/form-vertical', function(context) {
-			
-			this.render('views/form-sidebar.html').replace("#main-content");
-			this.render('views/form-sidebar.html').replace("#sidebar-content");
-		});
-		
-		this.get('#/form-large', function(context) {
-		
-			this.render('views/form-large.html').replace("#main-content");
-		});
-		this.get('#/form-hybrid', function(context) {
-		
-			this.render('views/form-hybrid.html').replace("#main-content");
-		});
-
-
-
-		this.get("#/", function() {
-			
-			return;
-		});
-	
-	});
-
+     });
 
       $(function() {
 	  
-	  
-
-		
 		
 		main_menu.run('#/home');
-		section_menu.run('#/');
 
 		//$("#home").parent("li").click();
 		//$("#home").click();
-		
-				
-
-		
 
       });
 
