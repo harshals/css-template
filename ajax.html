@@ -86,6 +86,10 @@
 			
 				context.render('views/form-hybrid.html').replace("#main-content");
 			});
+			app.get('#/form-multistep', function(context) {
+			
+				context.render('views/form-multistep.html').replace("#main-content");
+			});
 
 		}};
 
@@ -94,20 +98,17 @@
         this.debug = true;
         var form_fields = null;
 		
+		
 		/* generic application wide before method */
 
 		this.before( function(context) {
 			
-			//context.log(context);
-			
-		});	
-		
-		/* Do something if main menu is clicked */
-
-		this.before(/(home|table|form|menu|overview)$/, function(context) {
+			context.log("step 1");
 			
 			var path = context.path;
-			var el = $("#main-menu").find('a[href="' + path + '"]');
+			var controllers = path.split('-');
+			
+			var el = $("#main-menu").find('a[href="' + controllers[0] + '"]');
 			
 			$(el).parent("li").siblings("li").removeClass("active");
 			$(el).parent("li").addClass("active");
@@ -115,7 +116,17 @@
 			$("#main-content").html('');
 			$("#sidebar-content").html('');
 			$("#content-extra").html('');
-			$("#section-menu").html('');
+			$("#section-menu").html('');	
+
+
+		});	
+
+				/* Do something if main menu is clicked */
+
+		this.before(/(home|table|form|menu|overview)$/, function(context) {
+			
+			/* some additional log */
+		
 		});
 
 		/* Main Menu Selections */

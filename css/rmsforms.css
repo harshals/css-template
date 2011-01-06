@@ -66,6 +66,18 @@ fieldset {
 
 }
 
+#progress-bar {
+   background: url(images/percentage-bg.png) no-repeat left center;
+   height: 39px;
+   margin: 0 auto;
+}
+#progress-level {
+   background: url(images/progress.png) no-repeat left center;
+   width: 60%; /* SET THIS TO GET THE DESIRE LEVEL */
+   height: 39px;
+}
+
+
 .fat {
 	input,textarea,select {width:300px; }
 }
