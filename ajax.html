@@ -90,6 +90,23 @@
 			
 				context.render('views/form-multistep.html').replace("#main-content");
 			});
+			app.get(/form-multistep-step/, function(context) {
+				
+				var path = context.path.split('-');
+				var current_step = path[2];
+				
+				context.render('views/form-multistep.html').replace("#main-content");
+
+				$("fieldset").hide();
+				$("fieldset#" + current_step).show();
+
+				$("#steps").find(current_step)
+							.setClass("current")			
+							.nextAll().setClass("upcoming");
+							.prevAll().setClass("visited");
+
+			});
+
 
 		}};
 
