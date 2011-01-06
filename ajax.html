@@ -32,15 +32,39 @@
 
     <script type="text/javascript">
 	
+	TablesController = function(app) { with (app) {
+			
+			app.before(/^#\/table-/, function(context) {
+
+				context.log("inisde table");
+
+				// make sure the menu remains all the time
+
+		  		context.render('views/table-menu.html').replace("#section-menu");
+			});
+
+			app.get('#/table-simple', function(context) {
+			
+				context.render('views/table-simple.html').replace("#main-content");
+			});
+
+			app.get('#/table-condensed', function(context) {
+			
+				context.render('views/table-condensed.html').replace("#main-content");
+			});
+	}};
+
 	/* Handle all routes starting with #/form- */
 
 	FormsController = function(app) { with (app) {
 			
 			app.before(/^#\/form-/, function(context) {
 
-				context.log("inisde form"); 
-				context.render('views/form-menu.html').replace("#section-menu");
+				context.log("inisde form");
 
+				// make sure the menu remains all the time
+
+		  		context.render('views/form-menu.html').replace("#section-menu");
 			});
 
 			app.get('#/form-login', function(context) {
@@ -50,8 +74,6 @@
 
 			app.get('#/form-vertical', function(context) {
 				
-				
-				context.log("inisde form vertixc");
 				context.render('views/form-sidebar.html').replace("#main-content");
 				context.render('views/form-sidebar.html').replace("#sidebar-content");
 			});
@@ -78,8 +100,6 @@
 			
 			//context.log(context);
 			
-			$("#sidebar-content").html('');
-			$("#content-extra").html('');
 		});	
 		
 		/* Do something if main menu is clicked */
@@ -93,7 +113,8 @@
 			$(el).parent("li").addClass("active");
 			
 			$("#main-content").html('');
-			
+			$("#sidebar-content").html('');
+			$("#content-extra").html('');
 			$("#section-menu").html('');
 		});
 
@@ -111,6 +132,7 @@
 		this.get('#/table', function() {
 		  
           this.render('views/tables.html').replace("#main-content");
+          this.render('views/table-menu.html').replace("#section-menu");
 		});
 		this.get('#/form', function() {
 		  
@@ -135,6 +157,7 @@
 	  
 		  
 		FormsController(this);
+		TablesController(this);
 		
      });
 
