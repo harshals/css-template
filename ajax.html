@@ -29,6 +29,7 @@
     <script type="text/javascript" src="javascript/jquery-ui-1.8.2.custom.min.js"></script> 
     <script type="text/javascript" src="javascript/jquery.form.wizard-3.0.0.js"></script> 
   	<script type="text/javascript" src="javascript/jquery.tablehover.min.js"></script>
+  	<script type="text/javascript" src="javascript/jquery.formTowizard.js"></script>
     
   	<script type="text/javascript" src="javascript/sammy/sammy.js"></script>
     <script type="text/javascript"> 
@@ -103,8 +104,6 @@
 			});
 			app.get('#/form-multistep', function(context) {
 				
-
-
 				context.render('views/form-multistep.html')
 					.replace("#main-content")
 					.then(function() {
@@ -145,6 +144,16 @@
 			
 			});
 
+			app.get('#/form-multistep', function(context) {
+				
+				context.render('views/form-multistep-alternate.html')
+					.replace("#main-content")
+					.then(function() {
+
+						$("#myform").formTowizard({ });
+					});
+
+			});
 
 		}};
 
