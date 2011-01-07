@@ -114,7 +114,7 @@ form#search_engine {
 	input { padding: 5px; font-size: .9em; border: 2px solid #ccc ; }
 	input.small-field { width: 50%; padding: 4px; outline:none;}
 	
-	input.small-btn { padding: 4px; background: #7cc92d; color: #fff; border-color: #69ab24; font-weight: bold; }
+	input.small-button { padding: 4px; background: #7cc92d; color: #fff; border-color: #69ab24; font-weight: bold; }
 }
 
 #logo { float: left; color: #808080; margin: 0 0 5px 0; line-height: 25px; }
@@ -333,7 +333,7 @@ pre { background-color: #eee; padding: 10px; font-size: 11px }
 
 /* override */
 
-ul#steps { 
+ul#form-steps { 
 	margin:0; padding:0; list-style:none; overflow:hidden; height:1%; 
 	li { display:inline; margin-left:5px; float:left;
 		
@@ -341,7 +341,7 @@ ul#steps {
 		a { 	
 				height: 4em;
 				float: left;
-				width: 9em;
+				width: 7em;
 				display: block;
 				border: 0.1em solid #dcdce9;
 				color: #0d2474;
