@@ -144,13 +144,13 @@
 			
 			});
 
-			app.get('#/form-multistep', function(context) {
+			app.get('#/form-multistep-alternate', function(context) {
 				
 				context.render('views/form-multistep-alternate.html')
 					.replace("#main-content")
 					.then(function() {
 
-						$("#myform").formTowizard({ });
+						$("#myform").formTowizard({ stepElements: "fieldset.step" });
 					});
 
 			});
