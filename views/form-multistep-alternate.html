@@ -1,12 +1,12 @@
 
 <br>
-<ul id="form-steps">
-<li><input id="prev_step" type=reset class="button grid_2" value="Previous"></input></li>
-	<li class="visited"><a href="#/form-multistep-step1"><span>Step 1</span><br><span class="small">Basic Information</span></a></li>
-  	<li class="visited"><a href="#/form-multistep-step2"><span>Step 2</span><br><span class="small">Advanced information</span></a></li>
-  	<li class="current"><a href="#/form-multistep-step3"><span>Step 3</span><br><span class="small">Additional Information</span></a></li>
+<ul id="form-steps" class="form hii tar">
+<li><input id="prev_step" type=button class="button grid_2" value="Previous"></input></li>
+	<li class="active"><a href="#/form-multistep-step1"><span>Step 1</span><br><span class="small">Basic Information</span></a></li>
+  	<li class="upcoming"><a href="#/form-multistep-step2"><span>Step 2</span><br><span class="small">Advanced information</span></a></li>
+  	<li class="upcoming"><a href="#/form-multistep-step3"><span>Step 3</span><br><span class="small">Additional Information</span></a></li>
   	<li class="upcoming"><a href="#/form-multistep-step4"><span>Step 4</span><br><span class="small">Multi Select </span></a></li>
-	<li><input id="next_step" type=submit class="button grid_2" value="Next"/></li>
+	<li><input id="next_step" type=button class="button grid_2" value="Next"/></li>
 </ul>
 
 <br>
@@ -21,7 +21,7 @@
 
 
 <fieldset class="grid_17 green box step" id="step1">
-	<h2> Step 1</h2>
+	<legend> Step 1</legend>
 		<ul class="form tar">
 		<li><label>label</label><input type="text" /><span class="leftNote">This is a note</span></li>
 		<li class="required"><label>label</label><input type="text" /><span class="bottomNote offset1">This is a note</span></li>
@@ -38,7 +38,7 @@
 	</fieldset>
 
 <fieldset class="grid_17 green box step" id="step2">
-	<h2> Step 2</h2>
+	<legend> Step 2</legend>
 	<ul class="form tar">
 		<li><label>label</label><input type="text" /><span class="leftNote">This is a note</span></li>
 		<li class="required"><label>label</label><input type="text" /><span class="bottomNote offset1">This is a note</span></li>
@@ -55,7 +55,8 @@
 	</fieldset>
 
 <fieldset class="grid_17 green box step" id="step3">
-	
+		<legend> Step 3</legend>
+
 	<ul class="form tar fat">
 		<li><label>label</label><input type="text" /><span class="leftNote">This is a note</span></li>
 		<li class="required"><label>label</label><input type="text" /><span class="bottomNote offset1">This is a note</span></li>
@@ -73,6 +74,8 @@
 
 
 <fieldset class="grid_17 yellow box step submit_step" id="step4">
+			<legend> Step 4</legend>
+
 		<ul class="form hvv">
 		
 		<li>
@@ -134,7 +137,7 @@
 		
 		<li>
 			<ul class="form vii fat">
-				<li><input type=submit class="button " value="Submit"></li>
+				<li><input type=submit class="button " value="Submit" id="submit"></li>
 				<li><input type=reset class="button" value="Reset"></li>
 				
 			</ul>

@@ -19,51 +19,21 @@ fieldset{  }
 h2{ font-size:18px;}
 
 */
+
 fieldset { 
 	
 	display:block;
 
 	legend { display:none; }
 
-	ul li{ width:100%; float:left;  }
-	ul li.center * { margin-left:auto; margin-right:auto;  text-align: center; }
-
-	ul li ul{ background-color:#F8F3B8}
-
-	em{color:#FF0000;}
+//	ul li{ width:100%; float:left;  }
 	
-	ul{ margin:0; padding:0; list-style:none; overflow:hidden; height:1%; }
+//	ul li ul{ background-color:#F8F3B8}
+
+//	em{color:#FF0000;}
 	
-	li.buttons {display:inline; vertical-align:middle}
+//	ul{ margin:0; padding:0; list-style:none; overflow:hidden; height:1%; }
 	
-	li.last { padding-bottom: 25px; margin-bottom: 10px; border-bottom: 2px solid #edf495; }
-
-	input, textarea, select { padding: 6px; font-size: .9em; border: 2px solid #ccc ; }
-
-
-	option {  margin : 6px ;border-bottom : 1px solid #edf495; }
-
-	input {  outline:none; }
-	
-	textarea  {  height:90px;  outline:none; }
-	
-	textarea.small  {  height:40px;  outline:none; }
-	
-	input.checkbox, input.radio { margin-right: 10px; margin-top: 0.2em; margin-left:10px; background: transparent; border:none }
-	
-	input.button { padding-right:10px; padding-left:10px; background: #7cc92d; color: #fff; border-color: #69ab24;  font-weight: bold; margin-right: 10px; width:auto;}
-	
-	input.small-button { padding: 4px; background: #7cc92d; color: #fff; border-color: #69ab24; font-weight: bold; width:50%; }
-
-	:focus { background:#EFF5FF }
-
-
-	/*span.status-help,span.status-error,span.status-ok { .icon ;  .right;  display:inline; margin-right:10px; margin-top:5px; } */
-
-	span.status-ok{  background: url("icons/accept.png") no-repeat scroll left top transparent; }
-	span.status-help {  background: url("icons/help.png") no-repeat scroll left top transparent; }
-	span.status-error {  background: url("icons/cross.png") no-repeat scroll left top transparent; }
-
 }
 
 #progress-bar {
@@ -92,7 +62,43 @@ fieldset {
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.form { margin:0 0 0 0; padding:10px; list-style:none; }
+.form {
+
+
+	li{ width:100%; float:left;  }
+	li ul{ background-color:#F8F3B8}
+
+	li.buttons {display:inline; vertical-align:middle}
+	
+	li.last { padding-bottom: 25px; margin-bottom: 10px; border-bottom: 2px solid #edf495; }
+
+	input, textarea, select { padding: 6px; font-size: .9em; border: 2px solid #ccc ; }
+
+	option {  margin : 6px ;border-bottom : 1px solid #edf495; }
+
+	input {  outline:none; }
+	
+	textarea  {  height:90px;  outline:none; }
+	
+	textarea.small  {  height:40px;  outline:none; }
+	
+	input.checkbox, input.radio { margin-right: 10px; margin-top: 0.2em; margin-left:10px; background: transparent; border:none }
+	
+	input.button { padding-right:10px; padding-left:10px; background: #7cc92d; color: #fff; border-color: #69ab24;  font-weight: bold; margin-right: 10px; width:auto;}
+	
+	input.small-button { padding: 4px; background: #7cc92d; color: #fff; border-color: #69ab24; font-weight: bold; width:50%; }
+
+	:focus { background:#EFF5FF }
+
+
+	/*span.status-help,span.status-error,span.status-ok { .icon ;  .right;  display:inline; margin-right:10px; margin-top:5px; } */
+
+	span.status-ok{  background: url("icons/accept.png") no-repeat scroll left top transparent; }
+	span.status-help {  background: url("icons/help.png") no-repeat scroll left top transparent; }
+	span.status-error {  background: url("icons/cross.png") no-repeat scroll left top transparent; }
+
+}
+.form { margin:0 0 0 0; padding:10px; list-style:none; overflow:hidden; height:1%;}
 .form ul{ padding:2px 5px 5px 5px; overflow:hidden; height:1%; }
 .form label{ width:120px; padding:3px 5px 3px 0px; float:left; display:inline; }
 .form li{margin:3px 0 0 0;  padding-bottom:3px; }

@@ -334,31 +334,17 @@ pre { background-color: #eee; padding: 10px; font-size: 11px }
 /* override */
 
 ul#form-steps { 
-	margin:0; padding:0; list-style:none; overflow:hidden; height:1%; 
-	li { display:inline; margin-left:5px; float:left;
-		
-		background:none repeat scroll 0 0 #F0FDE2;
-		a { 	
-				height: 4em;
-				float: left;
-				width: 7em;
-				display: block;
-				border: 0.1em solid #dcdce9;
-				color: #0d2474;
-			   text-decoration: none;
-			   text-align: center;
-				vertical-align:middle;
+	
 
-		}	   
+	li a { width: 7em; height : 4em ; text-decoration:none;}
 
-	}
 	li.visited {
 		background-color:#F0FDE2;
 	}
 	li.upcoming {
 		background-color:lightgray;
 	}
-	li.current {
+	li.active {
 
 		background-color:#8FD448;
 	}

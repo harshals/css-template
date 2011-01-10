@@ -150,7 +150,12 @@
 					.replace("#main-content")
 					.then(function() {
 
-						$("#myform").formTowizard({ stepElements: "fieldset.step" });
+						$("#myform").formToWizard({ 
+							stepElements: "fieldset.step", 
+							navContainer: "#form-steps",
+							next : "#prev_step",
+							prev : "#next_step"
+						});
 					});
 
 			});
