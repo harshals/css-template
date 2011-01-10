@@ -7,14 +7,22 @@
           <p>Username pasword is not valid. Kindly <a href="#/register">Register</a> here</p>
         </div>
 
-		<form action="#/form-post" method="POST" class="" >
+		<form action="some_action" method="post" class="" >
            <fieldset class="grid_17 yellow box  ">
 			   <legend>This is a legend</legend>
 			   <ul class="form big tar fat">
 				   <li class="required">
 						<label>Username</label>
 						<input type="text"  name="username"/>
-				   <li class="required h">
+						<a class="bottomNote small" rel=facebox href="views/form-modal-login.html">Click here to select from list</a>
+					</li>
+					<li class="required">
+						<label>Via Sammy</label>
+						<input type="text"  name="username"/>
+						<a class="bottomNote small"  href="#/form-modal-login">Click here to select from list</a>
+					</li>
+				   
+					<li class="required h">
 						<label>Password</label><input type="text" /><br>
 						<a class="leftNote offset1 small">Forgot password ?</a>
 						<a class="leftNote  small">Register ?</a>

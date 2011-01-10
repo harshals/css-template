@@ -350,3 +350,19 @@ ul#form-steps {
 	}
 }
 
+/* images */
+
+ul.thumbnails { 
+
+ 	li { 
+ 		border-bottom: 0px none rgb(17, 17, 17); margin: 6px; float: left; 
+ 		img { padding: 5px; width: 102px; height: 102px; vertical-align: bottom; }
+ 		a { display: block; margin-bottom: 6px; float: left; }
+		a:hover img { background: #47A4BE none repeat scroll 0% 0%; }
+  		li p { clear: both; float: left; margin-top: -6px; }
+  		h4 { clear: both; }
+  		h4 a { border: 0pt none ; }
+ 	}
+ 	
+}
+
