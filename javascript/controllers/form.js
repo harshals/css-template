@@ -86,13 +86,32 @@ FormsController = function(app) { with (app) {
 				context.render('views/form-multistep-alternate.html')
 					.replace("#main-content")
 					.then(function() {
+						
+						$(".form-steps").find("input[name=save]").click(function() {
+								
+							alert("submit this form");
+							return false;
+						})
 
-						$("#myform").formToWizard({ 
-							stepElements: "fieldset.step", 
-							navContainer: "#form-steps",
-							next : "#prev_step",
-							prev : "#next_step"
-						});
+						$("#main-content")
+							.find("fieldset.step").not("#step1")
+							.hide();
+						$(".form-steps").find("a.nav-step").click(function(ev){
+							
+							var stp = $(this).attr("id").replace("nav-",'');
+							
+
+							$("#main-content")
+								.find("fieldset.step")
+								.hide();
+							$("#main-content")
+								.find("fieldset#" + stp).show();
+
+
+							return false;	
+
+						});	
+						
 					});
 
 			});

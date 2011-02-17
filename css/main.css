@@ -233,7 +233,13 @@ form#search_engine {
 .yellow { border-color: #edf495; background: none repeat scroll 0 0 #FFFFCC }
 
 .list {
-	li { list-style: none; border-bottom: 1px solid #eee; margin: 0; padding: 4px 4px 4px 12px; background: url(images/arrow.gif) no-repeat 0 .8em }
+	li { list-style: none; border-bottom: 1px solid #eee; margin: 0; padding: 4px 4px 12px 12px; background: url(images/arrow.gif) no-repeat 0 .8em }
+	li span.action {
+			float:right;
+			margin-right:5px;
+			cursor:pointer;
+			* { margin-right:15px}
+	}
 }
 
 #footer { 
@@ -419,21 +425,12 @@ pre { background-color: #eee; padding: 10px; font-size: 11px }
 
 /* override */
 
-ul#form-steps { 
+.form-steps { 
 	
+	.center;
 
-	li a { width: 7em; height : 4em ; text-decoration:none;}
+	a { margin-right:5px }
 
-	li.visited {
-		background-color:#F0FDE2;
-	}
-	li.upcoming {
-		background-color:lightgray;
-	}
-	li.active {
-
-		background-color:#8FD448;
-	}
 }
 
 /* images */

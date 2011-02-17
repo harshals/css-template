@@ -1,5 +1,6 @@
 
 MainController = function(app) { with (app) {
+
 app.get('#/home', function(context) {
 
        context.render('views/index.html').replace("#main-content");
@@ -33,5 +34,12 @@ app.get('#/media', function(context) {
 
         context.render('views/media-menu.html').replace("#section-menu");
 });
+
+app.get('#/task', function(context) {
+
+        context.render('views/task-menu.html').replace("#section-menu");
+        context.redirect("#/task-list");
+});
+
 
 }};
