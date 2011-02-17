@@ -24,6 +24,22 @@ TablesController = function(app) { with (app) {
 				context.render('views/table-condensed.html').replace("#main-content");
 			});
 
+			app.get('#/table-alternative', function(context) {
+				
+
+				context.render('views/table-pager.html').replace("#sidebar-content");
+			
+				context.render('views/table-data.html')
+				.appendTo("#main-content")
+				.then(function(html)  {
+
+					$(".dataTable")
+					.tablesorter({ widthFixed: true })
+					.tablesorterPager({ container : $("#pager") , positionFixed: false});
+
+				});
+
+			})
 			app.get('#/table-large', function(context) {
 				
 
@@ -39,9 +55,6 @@ TablesController = function(app) { with (app) {
 
 				});
 
-				
-
-				
 			});
 	}};
 
