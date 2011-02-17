@@ -23,5 +23,25 @@ TablesController = function(app) { with (app) {
 			
 				context.render('views/table-condensed.html').replace("#main-content");
 			});
+
+			app.get('#/table-large', function(context) {
+				
+
+				context.render('views/table-pager.html').replace("#sidebar-content");
+			
+				context.render('views/table-large.html')
+				.appendTo("#main-content")
+				.then(function(html)  {
+
+					$("#largeTable")
+					.tablesorter({ widthFixed: true })
+					.tablesorterPager({ container : $("#pager") , positionFixed: false});
+
+				});
+
+				
+
+				
+			});
 	}};
 

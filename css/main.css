@@ -331,6 +331,31 @@ pre { background-color: #eee; padding: 10px; font-size: 11px }
 	 background: url("icons/report.png") no-repeat scroll left top transparent;
 }
 
+.nav-first {
+
+	 background: url("icons/resultset_first.png") no-repeat scroll left top transparent;
+	 float:left;
+}
+
+.nav-last{
+
+	 background: url("icons/resultset_last.png") no-repeat scroll left top transparent;
+	 float:right;
+}
+.nav-prev{
+
+	 background: url("icons/resultset_previous.png") no-repeat scroll left top transparent;
+	 float:left;
+}
+.nav-next{
+
+	 background: url("icons/resultset_next.png") no-repeat scroll left top transparent;
+	 float:right;
+}
+
+
+
+
 /* override */
 
 ul#form-steps { 
