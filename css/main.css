@@ -100,6 +100,10 @@ h3 { color:#666 ;
 	a { color:#47A4BE; font-size: 1em; text-decoration: none;}
 }
 
+#main-content {
+	min-height:500px;
+}
+
 #content {  border-top: 5px solid #8fd448; background: #fff}
 
 #top{ float: right; text-align: right;}
@@ -448,4 +452,16 @@ ul.thumbnails {
  	}
  	
 }
+/* task css 
 
+.task-Success {
+	
+	background-color: lightgreen !important;
+}
+
+.task-Incomplete{
+	
+	background-color: pink !important;
+}
+
+*/

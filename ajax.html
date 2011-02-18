@@ -35,6 +35,7 @@
 	<script type="text/javascript" src="javascript/jquery.facebox.js"></script>
 
   	<script type="text/javascript" src="javascript/sammy/sammy.js"></script>
+  	<script type="text/javascript" src="javascript/sammy/min/plugins/sammy.template-latest.min.js"></script>
 	<script type="text/javascript" src="javascript/controllers/app.js"></script>
 	<script type="text/javascript" src="javascript/controllers/form.js"></script>
 	<script type="text/javascript" src="javascript/controllers/table.js"></script>
@@ -73,11 +74,7 @@
 			$(el).parent("li").addClass("active");
 			
 			
-			$("#main-content").html('');
-			$("#sidebar-content").html('');
-			$("#content-extra").html('');
-			$("#section-menu").html('');	
-
+		
 
 		});	
 
@@ -86,7 +83,11 @@
 		this.before(/(home|table|form|menu|overview)$/, function(context) {
 			
 			/* some additional log */
-		
+			$("#main-content").html('');
+			$("#sidebar-content").html('');
+			$("#content-extra").html('');
+			$("#section-menu").html('');	
+
 		});
 
 		/* Main Menu Selections */
