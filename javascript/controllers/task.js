@@ -18,7 +18,7 @@ TaskController = function(app) { with (app) {
 		  			.then(function(task_html) {
 					
 						$("#sidebar-content").hide();
-						$("#sidebar-content" ).find("input.datepicker").hide(); //datepicker( "option", "format", 'yyyy-mm-dd');
+						$("#sidebar-content" ).find("input.datepicker").datepicker( { altFormat: 'yy-mm-dd' , dateFormat : 'dd-mm-yy'});
 						$("#section-menu").find("a.task-add").click(function() {
 
 							$("#sidebar-content").toggle();
